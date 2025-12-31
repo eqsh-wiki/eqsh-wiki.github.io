@@ -36,19 +36,19 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Install - Eqsh Wiki</title>
+    <title>IPC - Eqsh Wiki</title>
     
 
 
-<title>Install</title>
+<title>IPC</title>
 
 
 
-<meta name="description" content="Installing eqSh, the Quickshell-based shell for Hyprland">
+<meta name="description" content="IPC Calls and Commands for eqSh">
 
 
 
-<meta name="keywords" content="docs, eqsh, desktop, linux, equora, quickshell, hyprland, install">
+<meta name="keywords" content="docs, desktop, equora, quickshell, hyprland, eqsh, ipc, linux">
 
 
 
@@ -56,66 +56,98 @@
 
 
 
-<link rel="canonical" href="https://eqsh-wiki.github.io/install/">
+<link rel="canonical" href="https://eqsh-wiki.github.io/00_configuration/ipc/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Install">
+<meta property="og:title" content="IPC">
 
 
 
-<meta property="og:description" content="Installing eqSh, the Quickshell-based shell for Hyprland">
+<meta property="og:description" content="IPC Calls and Commands for eqSh">
 
 
 
-<meta property="og:url" content="https://eqsh-wiki.github.io/install/">
+<meta property="og:url" content="https://eqsh-wiki.github.io/00_configuration/ipc/">
 
 
 
-<meta property="og:image" content="./assets/eqsh.svg">
+<meta property="og:image" content="../assets/eqsh.svg">
 
 
 
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Install">
+<meta name="twitter:title" content="IPC">
 
 
 
-<meta name="twitter:description" content="Installing eqSh, the Quickshell-based shell for Hyprland">
+<meta name="twitter:description" content="IPC Calls and Commands for eqSh">
 
 
 
-<meta name="twitter:image" content="./assets/eqsh.svg">
+<meta name="twitter:image" content="../assets/eqsh.svg">
 
 
 <!-- JSON-LD Structured Data -->
 
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "IPC",
+    "url": "https://eqsh-wiki.github.io/00_configuration/ipc/",
+    "description": "IPC Calls and Commands for eqSh",
+    
+    "author": {
+      "@type": "Person",
+      "name": "enviction"
+    },
+    
+    
+    
+    
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://eqsh-wiki.github.io/00_configuration/ipc/"
+    },
+    
+    
+    "image": {
+      "@type": "ImageObject",
+      "url": "../assets/eqsh.svg",
+      "width": 1200,
+      "height": 630
+    }
+    
+  }
+  </script>
 
 
-    <link rel="icon" href="../img/favicon.ico">
 
-    <link href="../css/base.css" rel="stylesheet">
-    <link href="../css/geist.css" rel="stylesheet">
+    <link rel="icon" href="../../img/favicon.ico">
+
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/geist.css" rel="stylesheet">
 
     
     
 
 <link id="pygments-light" rel="stylesheet"
-    href="../css/pygments/shadcn-light.css">
+    href="../../css/pygments/shadcn-light.css">
 <link id="pygments-dark" rel="stylesheet"
-    href="../css/pygments/github-dark.css"
+    href="../../css/pygments/github-dark.css"
     media="(prefers-color-scheme: dark)">
 
 
     
-    <link href="../css/images.css" rel="stylesheet">
+    <link href="../../css/images.css" rel="stylesheet">
 
     
 
-    <script src="../js/callbacks.js"></script>
+    <script src="../../js/callbacks.js"></script>
 
     
 
@@ -157,7 +189,7 @@
                 <span class="size-8 flex flex-row justify-center items-center">
                     
 
-<img class="size-5" src="../assets/eqsh.svg" alt="icon">
+<img class="size-5" src="../../assets/eqsh.svg" alt="icon">
 
 
                 </span>
@@ -171,7 +203,7 @@
   
   
     <a class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all hover:bg-accent hover:text-accent-foreground h-8 rounded-md gap-1.5 px-3"
-      href="../about/">
+      href="../../about/">
       About
     </a>
   
@@ -337,7 +369,7 @@
                 
                 
                 <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="true" data-sidebar="menu-button"
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
         data-size="default" href="/install/"
         class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
@@ -422,7 +454,7 @@
 </li>
                 
                 <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
-    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
+    <a data-slot="sidebar-menu-button" data-active="true" data-sidebar="menu-button"
         data-size="default" href="/00_configuration/ipc/"
         class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
@@ -610,12 +642,12 @@
         <h1
           class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl"
         >
-          Install
+          IPC
         </h1>
 
         <div class="flex items-center gap-2 pt-1.5">
           
-<button onclick="fetch(`https://eqsh-wiki.github.io/install.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))" 
+<button onclick="fetch(`https://eqsh-wiki.github.io/00_configuration/ipc.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))" 
         data-slot="button" 
         class="cursor-pointer inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md gap-1.5 px-3 has-[&>svg]:px-2.5 h-8 shadow-none md:h-7 md:text-[0.8rem]">
 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-copy ">
@@ -628,7 +660,7 @@
             data-slot="button"
             id="previous-button"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-            href="/getstarted/"
+            href="/00_configuration/config/"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -654,7 +686,7 @@
             data-slot="button"
             id="next-button"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-            href="/00_configuration/cli/"
+            href="/00_configuration/keybinds/"
           >
             <span class="sr-only">Next</span>
             <svg
@@ -682,7 +714,7 @@
         id="summary"
         class="text-muted-foreground text-[1.05rem] text-balance sm:text-base"
       >
-        Installing eqSh has never been easier
+        IPC Calls and Commands
       </p>
       
     </div>
@@ -695,28 +727,196 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    <p>You can install eqSh using the <a href="https://github.com/eq-desktop/cli">eqSh CLI</a>.</p>
-<div class="admonition info">
-<p class="admonition-title">Pre-requisites</p>
-<p>Don't forget to have python installed on your system.</p>
+    <h2 id="ipc-calls-and-commands">IPC Calls and Commands<a class="headerlink" href="#ipc-calls-and-commands" title="Permanent link">&para;</a></h2>
+<p>You can use <code>equora funcs</code> to see all available functions and commands.</p>
+<p>If you want to call a function or command, use <code>equora ipc</code> with the namespace, function or command name and the arguments you want to pass.</p>
+<div class="admonition note">
+<p class="admonition-title">Example:</p>
+<p><code>equora ipc eqlock lock</code></p>
 </div>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/eq-desktop/cli.git
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>cli/
-$<span class="w"> </span>./install.sh
-</code></pre></div>
-
-<p>Then run the install command:</p>
-<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>equora<span class="w"> </span>install
-</code></pre></div>
-
-<p>Afterward, you can launch eqSh using the <code>equora run</code> command.</p>
+<div class="admonition info">
+<p><strong>Note:</strong>
+Some of these commands need further explanation. At the bottom of this page, you can find information about them.</p>
+</div>
+<h3 id="ipc-calls">IPC Calls<a class="headerlink" href="#ipc-calls" title="Permanent link">&para;</a></h3>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>spotlight</td>
+<td>toggle()</td>
+<td>Toggle spotlight</td>
+</tr>
+<tr>
+<td>systemDialogs</td>
+<td><strong>Deprecated</strong> (use modal instead) newDialog(appName, icon_path, title, description, accept, decline, commandAccept, commandDecline, customStyle)</td>
+<td>Create a new dialog</td>
+</tr>
+<tr>
+<td>widgets</td>
+<td>editMode()</td>
+<td>Toggle edit mode for widgets</td>
+</tr>
+<tr>
+<td>notificationCenter</td>
+<td>toggle()</td>
+<td>Toggle notification center</td>
+</tr>
+<tr>
+<td>eqlock</td>
+<td>lock()</td>
+<td>Lock the screen</td>
+</tr>
+<tr>
+<td>eqlock</td>
+<td>isLocked()</td>
+<td>Get the current lock state</td>
+</tr>
+<tr>
+<td>eqlock</td>
+<td>unlock()</td>
+<td>Unlock the screen</td>
+</tr>
+<tr>
+<td>settings</td>
+<td>toggle()</td>
+<td>Toggle settings</td>
+</tr>
+<tr>
+<td>notch</td>
+<td>closeAllInstances()</td>
+<td>Close all notch instances</td>
+</tr>
+<tr>
+<td>notch</td>
+<td>instance(code)</td>
+<td>Create a new notch instance</td>
+</tr>
+<tr>
+<td>notch</td>
+<td>activateInstance()</td>
+<td>Activate the currently open notch instance</td>
+</tr>
+<tr>
+<td>notch</td>
+<td>closeInstance()</td>
+<td>Close the currently open notch instance</td>
+</tr>
+<tr>
+<td>popup</td>
+<td>openPopup(iconPath, app, title, description, timeout, aargs)</td>
+<td>Open a new popup</td>
+</tr>
+<tr>
+<td>launchpad</td>
+<td>toggle()</td>
+<td>Toggle launchpad</td>
+</tr>
+<tr>
+<td>controlCenter</td>
+<td>openWifi()</td>
+<td>Open the wifi settings</td>
+</tr>
+<tr>
+<td>controlCenter</td>
+<td>open()</td>
+<td>Open the control center</td>
+</tr>
+<tr>
+<td>controlCenter</td>
+<td>openBluetooth()</td>
+<td>Open the bluetooth settings</td>
+</tr>
+<tr>
+<td>controlCenter</td>
+<td>close()</td>
+<td>Close the control center</td>
+</tr>
+<tr>
+<td>sigrid</td>
+<td>toggle()</td>
+<td>Toggle sigrid</td>
+</tr>
+<tr>
+<td>doNotDisturb</td>
+<td>toggle()</td>
+<td>Toggle do not disturb</td>
+</tr>
+<tr>
+<td>doNotDisturb</td>
+<td>enable()</td>
+<td>Enable do not disturb</td>
+</tr>
+<tr>
+<td>doNotDisturb</td>
+<td>disable()</td>
+<td>Disable do not disturb</td>
+</tr>
+<tr>
+<td>wallpaper</td>
+<td>change(path)</td>
+<td>Change the wallpaper</td>
+</tr>
+<tr>
+<td>modal</td>
+<td>instance(appName, title, description, actionsJsonPath, iconPath, useIcon)</td>
+<td>Create a new modal instance</td>
+</tr>
+<tr>
+<td>music</td>
+<td>getData()</td>
+<td>Get the current music data</td>
+</tr>
+<tr>
+<td>music</td>
+<td>next()</td>
+<td>Go to the next music track</td>
+</tr>
+<tr>
+<td>music</td>
+<td>previous()</td>
+<td>Go to the previous music track</td>
+</tr>
+<tr>
+<td>music</td>
+<td>togglePlay()</td>
+<td>Toggle the music playback</td>
+</tr>
+<tr>
+<td>screenshot</td>
+<td>toggle()</td>
+<td>Toggle screenshot</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="advanced-ipc-calls">Advanced IPC Calls<a class="headerlink" href="#advanced-ipc-calls" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../../01_development/modal/">Modal</a><ul>
+<li>Create Dialogs, yes/no questions, User Input, and more</li>
+</ul>
+</li>
+<li><a href="../../01_development/notch/">Notch</a><ul>
+<li>Useful information and shell extensions without distracting the user</li>
+</ul>
+</li>
+<li><a href="../../01_development/popup/">Popups</a><ul>
+<li>Banner and Toast Notifications that don't distract the user but still get their attention</li>
+</ul>
+</li>
+</ul>
   </div>
 </article>
                                 <div class="mx-auto flex flex-wrap h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none"
-        href="/getstarted/">
+        href="/00_configuration/config/">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="tabler-icon tabler-icon-arrow-left ">
@@ -724,14 +924,14 @@ $<span class="w"> </span>./install.sh
             <path d="M5 12l6 6"></path>
             <path d="M5 12l6 -6"></path>
         </svg>
-        <span class="max-[500px]:hidden">Get started</span>
+        <span class="max-[500px]:hidden">Config</span>
     </a>
     
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 ml-auto shadow-none"
-        href="/00_configuration/cli/">
-        <span class="max-[500px]:hidden">Cli</span>
+        href="/00_configuration/keybinds/">
+        <span class="max-[500px]:hidden">Keybinds</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="tabler-icon tabler-icon-arrow-right ">
@@ -758,25 +958,25 @@ $<span class="w"> </span>./install.sh
                 <div class="text-muted-foreground text-sm font-medium">Menu</div>
                 <div class="flex flex-col gap-3">
                     
-                    <a class="text-2xl font-medium" href="..">
+                    <a class="text-2xl font-medium" href="../..">
                         
                         Home
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="../getstarted/">
+                    <a class="text-2xl font-medium" href="../../getstarted/">
                         
                         Get started
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="./">
+                    <a class="text-2xl font-medium" href="../../install/">
                         
                         Install
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="../faq/">
+                    <a class="text-2xl font-medium" href="../../faq/">
                         
                         FAQ
                         
@@ -794,25 +994,25 @@ $<span class="w"> </span>./install.sh
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../00_configuration/config/">
+                        <a class="text-2xl font-medium" href="../config/">
                             
                             Config
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../00_configuration/cli/">
+                        <a class="text-2xl font-medium" href="../cli/">
                             
                             Cli
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../00_configuration/ipc/">
+                        <a class="text-2xl font-medium" href="./">
                             
                             IPC
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../00_configuration/keybinds/">
+                        <a class="text-2xl font-medium" href="../keybinds/">
                             
                             Keybinds
                             
@@ -827,31 +1027,31 @@ $<span class="w"> </span>./install.sh
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../01_development/notch/">
+                        <a class="text-2xl font-medium" href="../../01_development/notch/">
                             
                             Notch
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../01_development/firstnotch/">
+                        <a class="text-2xl font-medium" href="../../01_development/firstnotch/">
                             
                             First Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../01_development/advancednotch/">
+                        <a class="text-2xl font-medium" href="../../01_development/advancednotch/">
                             
                             Advanced Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../01_development/modal/">
+                        <a class="text-2xl font-medium" href="../../01_development/modal/">
                             
                             Modals
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="../01_development/popup/">
+                        <a class="text-2xl font-medium" href="../../01_development/popup/">
                             
                             Popups
                             
@@ -866,7 +1066,7 @@ $<span class="w"> </span>./install.sh
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="../02_customization/customizing/">
+                        <a class="text-2xl font-medium" href="../../02_customization/customizing/">
                             
                             Customizing
                             
@@ -890,6 +1090,36 @@ $<span class="w"> </span>./install.sh
                                 <div view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
+        
+        
+        
+        
+        <a href="#ipc-calls-and-commands"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            IPC Calls and Commands
+        </a>
+        
+        
+        <a href="#ipc-calls"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            IPC Calls
+        </a>
+        
+        
+
+        
+        <a href="#advanced-ipc-calls"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Advanced IPC Calls
+        </a>
+        
+
+        
+        
+        
         
 
     </div>
@@ -918,12 +1148,12 @@ $<span class="w"> </span>./install.sh
     </div>
      
 
-<script src="../search/main.js"></script>
+<script src="../../search/main.js"></script>
 
 
     
 
-    <script src="../js/copy-button.js"></script>
+    <script src="../../js/copy-button.js"></script>
     <script>updatePygmentsStylesheet();</script>
     
     <script>fetchStargazers("https://github.com/eq-desktop/eqsh");</script>

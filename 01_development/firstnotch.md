@@ -160,6 +160,79 @@ This is what it would look like when you run it.
 
 ![Your First Notch App](../assets/development/notch/firstnotch.png)
 
+But wait, how do you run it?
+
+```bash
+$ cd MyNotchApp
+$ equora new_notch_app ./Main.qml "MyNotchApp"
+```
+
+Want to end the currently focused app?
+
+```bash
+$ equora destroy_notch_app
+```
+
+Heres the entire file:
+
+/// details | Main.qml
+```qml
+import QtQuick
+import Quickshell
+import qs
+import qs.ui.controls.auxiliary.notch
+import qs.ui.controls.primitives
+
+NotchApplication {
+    id: root
+    details.version: "Elephant-1"
+    details.appType: "indicator"
+    meta.height: 60
+    meta.width: 300
+
+    indicative: Item {
+        CFText {
+            anchors.top: parent.top
+            anchors.topMargin: 6
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+            text: "Indicative Mode"
+        }
+    }
+    active: Item {
+        CFText {
+            id: text
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+            text: "Active Mode"
+        }
+        NotchButton {
+            id: close
+            width: 120
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: text.right
+            anchors.leftMargin: 10
+            text: "Click to Close"
+            color: "#ffffff"
+            onClicked: root.closeMe()
+        }
+        NotchButton {
+            id: test
+            iconSource: "file:///home/enviction/Downloads/lock.svg"
+            iconSize: 20
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: close.right
+            anchors.leftMargin: 10
+            color: "#ffffff"
+            backgroundColor: "#502369ff"
+            iconColor: "#2369ff"
+        }
+    }
+}
+```
+///
+
 ### Tips & Tricks
 
 The NotchApplication has a few properties that you can use to make your Notch App next-level.

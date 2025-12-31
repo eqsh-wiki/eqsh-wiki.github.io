@@ -1,4 +1,4 @@
 order: 1
 alpha: true
-title: Notch Application
+title: The Notch
 sidebar_title: Notch

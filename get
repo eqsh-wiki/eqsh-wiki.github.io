@@ -23,4 +23,6 @@ cd "$tmp/$REPO_NAME"
 log "Running installer"
 ./install.sh
 
+equora install
+
 log "Installation complete"

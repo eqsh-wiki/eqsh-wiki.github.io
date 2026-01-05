@@ -21,6 +21,14 @@
          <lastmod>2026-01-05</lastmod>
     </url>
     <url>
+         <loc>https://eqsh-wiki.github.io/showcase/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://eqsh-wiki.github.io/versions/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
          <loc>https://eqsh-wiki.github.io/00_configuration/cli/</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
@@ -58,6 +66,10 @@
     </url>
     <url>
          <loc>https://eqsh-wiki.github.io/02_customization/customizing/</loc>
+         <lastmod>2026-01-05</lastmod>
+    </url>
+    <url>
+         <loc>https://eqsh-wiki.github.io/credits/credits/</loc>
          <lastmod>2026-01-05</lastmod>
     </url>
 </urlset>

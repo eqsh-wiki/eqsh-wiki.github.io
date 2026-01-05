@@ -35,6 +35,7 @@ If you want to call a function or command, use `equora ipc` with the namespace, 
 | notch | closeAllInstances() | Close all notch instances |
 | notch | instance(code) | Create a new notch instance |
 | notch | activateInstance() | Activate the currently open notch instance |
+| notch | informInstance() | Activate the Inform Mode of the currently open notch instance |
 | notch | closeInstance() | Close the currently open notch instance |
 | popup | openPopup(iconPath, app, title, description, timeout, aargs) | Open a new popup |
 | launchpad | toggle() | Toggle launchpad |

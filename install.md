@@ -11,6 +11,12 @@ You can install eqSh using the [eqSh CLI](https://github.com/eq-desktop/cli).
 !!! info "Pre-requisites"
     Don't forget to have python installed on your system.
 
+/// tab | Curl Installation
+```bash
+$ curl -fsSL https://eqsh-wiki.github.io/get | bash
+```
+---
+///
 /// tab | Manual Installation
 ```bash
 $ git clone https://github.com/eq-desktop/cli.git
@@ -21,12 +27,6 @@ Then run the install command:
 
 ```bash
 $ equora install
-```
----
-///
-/// tab | Curl Installation
-```bash
-$ curl -fsSL https://eqsh-wiki.github.io/get | bash
 ```
 ---
 ///

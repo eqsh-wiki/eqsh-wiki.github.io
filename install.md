@@ -26,9 +26,9 @@ $ ./install.sh
 Then run the install command:
 
 ```bash
-$ equora install
+$ au install
 ```
 ---
 ///
 
-Afterward, you can launch eqSh using the `equora run` command.
+Afterward, you can launch eqSh using the `au run` command.

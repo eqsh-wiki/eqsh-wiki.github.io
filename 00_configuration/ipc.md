@@ -54,6 +54,8 @@ If you want to call a function or command, use `equora ipc` with the namespace, 
 | music | previous() | Go to the previous music track |
 | music | togglePlay() | Toggle the music playback |
 | screenshot | toggle() | Toggle screenshot |
+| display    | brighter() | Make the display brighter |
+| display    | dimmer() | Make the display darker |
 
 ## Advanced IPC Calls
 

@@ -44,11 +44,11 @@
 
 
 
-<meta name="description" content="A complete guide to eqSh's CLI tools with all available commands">
+<meta name="description" content="Developer-focused documentation for the Aureli CLI, IPC bridge, runtime control, and configuration tooling.">
 
 
 
-<meta name="keywords" content="docs, desktop, equora, quickshell, hyprland, eqsh, setup, linux, cli">
+<meta name="keywords" content="docs, cli, aureli, eqsh, quickshell, hyprland, linux, ipc">
 
 
 
@@ -65,7 +65,7 @@
 
 
 
-<meta property="og:description" content="A complete guide to eqSh's CLI tools with all available commands">
+<meta property="og:description" content="Developer-focused documentation for the Aureli CLI, IPC bridge, runtime control, and configuration tooling.">
 
 
 
@@ -84,7 +84,7 @@
 
 
 
-<meta name="twitter:description" content="A complete guide to eqSh's CLI tools with all available commands">
+<meta name="twitter:description" content="Developer-focused documentation for the Aureli CLI, IPC bridge, runtime control, and configuration tooling.">
 
 
 
@@ -769,7 +769,7 @@
         id="summary"
         class="text-muted-foreground text-[1.05rem] text-balance sm:text-base"
       >
-        Everything you need to know about eqSh's CLI tools
+        Developer-focused CLI Documentation
       </p>
       
     </div>
@@ -782,7 +782,240 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    <p><a class="reference" href="https://github.com/eq-desktop/cli/">CLI tool on Github</a></p>
+    <p>This page documents the <strong>Aureli CLI tool</strong> (<code>aureli</code>).
+It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, and <strong>configuration editor</strong> for the eqSh desktop.</p>
+<p>The CLI is designed for:</p>
+<ul>
+<li>Developers scripting Aureli behavior</li>
+<li>Runtime control &amp; debugging</li>
+<li>JSON config mutation</li>
+<li>Launching internal UI components</li>
+<li>Managing eqSh lifecycle</li>
+</ul>
+<p>The CLI communicates with eqSh through:</p>
+<ul>
+<li><strong>Quickshell execution</strong></li>
+<li><strong>Runtime IPC calls</strong></li>
+<li><strong>Direct JSON config edits</strong></li>
+</ul>
+<hr />
+<h2 id="binary">Binary<a class="headerlink" href="#binary" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
+
+<p>You can override the Aureli installation path:</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>-l<span class="w"> </span>/custom/path<span class="w"> </span>run
+</code></pre></div>
+
+<p>Default:</p>
+<div class="codehilite"><pre><span></span><code>~/.local/share/equora/eqsh
+</code></pre></div>
+
+<hr />
+<h2 id="runtime-paths">Runtime Paths<a class="headerlink" href="#runtime-paths" title="Permanent link">&para;</a></h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/.local/share/equora/eqsh</code></td>
+<td>Aureli installation</td>
+</tr>
+<tr>
+<td><code>~/.config/aureli/config.json</code></td>
+<td>Runtime config</td>
+</tr>
+<tr>
+<td><code>~/.config/aureli/runtime</code></td>
+<td>Running instance metadata (PID etc.)</td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="core-commands">Core Commands<a class="headerlink" href="#core-commands" title="Permanent link">&para;</a></h1>
+<h2 id="run"><code>run</code><a class="headerlink" href="#run" title="Permanent link">&para;</a></h2>
+<p>Start Aureli.</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>run
+</code></pre></div>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dev</code></td>
+<td>Runs in foreground (dev mode)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Behavior:</p>
+<ul>
+<li>Prevents double launch</li>
+<li>Executes eqSh via Quickshell</li>
+<li>Detached by default</li>
+</ul>
+<hr />
+<h2 id="quit"><code>quit</code><a class="headerlink" href="#quit" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>quit
+</code></pre></div>
+
+<p>Force kills Aureli using SIGKILL.</p>
+<hr />
+<h2 id="restart"><code>restart</code><a class="headerlink" href="#restart" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>restart
+</code></pre></div>
+
+<p>Sequence:</p>
+<ol>
+<li>Kill running instance</li>
+<li>Relaunch eqSh</li>
+</ol>
+<hr />
+<h2 id="lock"><code>lock</code><a class="headerlink" href="#lock" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>lock
+</code></pre></div>
+
+<p>Locks the screen.</p>
+<hr />
+<h2 id="update"><code>update</code><a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>update
+</code></pre></div>
+
+<p>Git pulls eqSh repo.</p>
+<hr />
+<h2 id="install"><code>install</code><a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<p>Installs Aureli from GitHub.</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>install
+</code></pre></div>
+
+<h2 id="installwallpapers"><code>installWallpapers</code><a class="headerlink" href="#installwallpapers" title="Permanent link">&para;</a></h2>
+<p>Installs the default Aureli Wallpapers.</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>installWallpapers
+</code></pre></div>
+
+<h2 id="configuration-commands">Configuration Commands<a class="headerlink" href="#configuration-commands" title="Permanent link">&para;</a></h2>
+<h2 id="set"><code>set</code><a class="headerlink" href="#set" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span><span class="nb">set</span><span class="w"> </span>bar.height<span class="w"> </span><span class="m">40</span>
+</code></pre></div>
+
+<p>Supports automatic type casting:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Stored As</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>42</code></td>
+<td>int</td>
+</tr>
+<tr>
+<td><code>3.14</code></td>
+<td>float</td>
+</tr>
+<tr>
+<td><code>true/false</code></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>other</td>
+<td>string</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nested paths use dot notation:</p>
+<div class="codehilite"><pre><span></span><code>aureli<span class="w"> </span><span class="nb">set</span><span class="w"> </span>appearance.accentColor<span class="w"> </span><span class="s2">&quot;#ff00ff&quot;</span>
+</code></pre></div>
+
+<p>Hot-reload occurs via eqSh file watchers.</p>
+<h2 id="get"><code>get</code><a class="headerlink" href="#get" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>get<span class="w"> </span>bar.height
+</code></pre></div>
+
+<p>Special:</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>get<span class="w"> </span>all
+</code></pre></div>
+
+<p>Lists top-level sections.</p>
+<hr />
+<h2 id="reset"><code>reset</code><a class="headerlink" href="#reset" title="Permanent link">&para;</a></h2>
+<p>Delete a config key.</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>reset<span class="w"> </span>bar.height
+</code></pre></div>
+
+<p>Reset everything:</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>reset<span class="w"> </span>--all
+</code></pre></div>
+
+<p>⚠ Requires restart.</p>
+<h1 id="ui-control-commands">UI Control Commands<a class="headerlink" href="#ui-control-commands" title="Permanent link">&para;</a></h1>
+<p>These toggle or spawn UI systems.</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>IPC Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>settings</code></td>
+<td>Settings window</td>
+</tr>
+<tr>
+<td><code>launchpad</code></td>
+<td>App grid</td>
+</tr>
+<tr>
+<td><code>notification_center</code></td>
+<td>Notification center</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="dialogs">Dialogs<a class="headerlink" href="#dialogs" title="Permanent link">&para;</a></h2>
+<p>Create system dialog:</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>dialog<span class="w"> </span>&lt;app&gt;<span class="w"> </span>&lt;icon&gt;<span class="w"> </span>&lt;title&gt;<span class="w"> </span>&lt;desc&gt;<span class="w"> </span>&lt;accept&gt;<span class="w"> </span>&lt;decline&gt;<span class="w"> </span>&lt;cmdA&gt;<span class="w"> </span>&lt;cmdD&gt;<span class="w"> </span>&lt;style&gt;
+</code></pre></div>
+
+<p>Bridges to:</p>
+<div class="codehilite"><pre><span></span><code>systemDialogs.newDialog
+</code></pre></div>
+
+<hr />
+<h2 id="notch-apps">Notch Apps<a class="headerlink" href="#notch-apps" title="Permanent link">&para;</a></h2>
+<h3 id="create">Create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>new_notch_app<span class="w"> </span>MyApp.qml<span class="w"> </span><span class="s2">&quot;Music&quot;</span>
+</code></pre></div>
+
+<h3 id="destroy">Destroy<a class="headerlink" href="#destroy" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>destroy_notch_app
+</code></pre></div>
+
+<hr />
+<h1 id="ipc-bridge">IPC Bridge<a class="headerlink" href="#ipc-bridge" title="Permanent link">&para;</a></h1>
+<h2 id="generic-ipc">Generic IPC<a class="headerlink" href="#generic-ipc" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>ipc<span class="w"> </span>&lt;method&gt;<span class="w"> </span><span class="o">[</span>args...<span class="o">]</span>
+</code></pre></div>
+
+<p>Example:</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>ipc<span class="w"> </span>eqlock<span class="w"> </span>lock
+</code></pre></div>
+
+<h2 id="show-ipc-functions">Show IPC Functions<a class="headerlink" href="#show-ipc-functions" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>funcs
+</code></pre></div>
+
+<p>Lists exposed IPC endpoints.</p>
   </div>
 </article>
                                 <div class="mx-auto flex flex-wrap h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">
@@ -996,6 +1229,148 @@
                                 <div view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
+        
+        
+        
+        
+        <a href="#binary"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Binary
+        </a>
+        
+
+        
+        <a href="#runtime-paths"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Runtime Paths
+        </a>
+        
+
+        
+        <a href="#core-commands"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            Core Commands
+        </a>
+        
+        
+        <a href="#run"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            run
+        </a>
+        
+        <a href="#quit"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            quit
+        </a>
+        
+        <a href="#restart"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            restart
+        </a>
+        
+        <a href="#lock"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            lock
+        </a>
+        
+        <a href="#update"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            update
+        </a>
+        
+        <a href="#install"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            install
+        </a>
+        
+        <a href="#installwallpapers"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            installWallpapers
+        </a>
+        
+        <a href="#configuration-commands"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            Configuration Commands
+        </a>
+        
+        <a href="#set"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            set
+        </a>
+        
+        <a href="#get"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            get
+        </a>
+        
+        <a href="#reset"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            reset
+        </a>
+        
+        
+
+        
+        <a href="#ui-control-commands"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            UI Control Commands
+        </a>
+        
+        
+        <a href="#dialogs"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            Dialogs
+        </a>
+        
+        <a href="#notch-apps"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            Notch Apps
+        </a>
+        
+        
+
+        
+        <a href="#ipc-bridge"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2">
+            IPC Bridge
+        </a>
+        
+        
+        <a href="#generic-ipc"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            Generic IPC
+        </a>
+        
+        <a href="#show-ipc-functions"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            Show IPC Functions
+        </a>
+        
+        
+
+        
+        
+        
         
 
     </div>

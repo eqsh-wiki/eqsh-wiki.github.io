@@ -164,13 +164,13 @@ But wait, how do you run it?
 
 ```bash
 $ cd MyNotchApp
-$ equora new_notch_app ./Main.qml "MyNotchApp"
+$ au new_notch_app ./Main.qml "MyNotchApp"
 ```
 
 Want to end the currently focused app?
 
 ```bash
-$ equora destroy_notch_app
+$ au destroy_notch_app
 ```
 
 Heres the entire file:

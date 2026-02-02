@@ -11,13 +11,13 @@ A popup is an extension of the notch, in which you can show information to the u
 A popup is created like anything in eqSh, using the cli.
 
 ```bash
-$ equora ipc popup openPopup iconPath appName title description timeout aargs
+$ au ipc popup openPopup iconPath appName title description timeout aargs
 ```
 
 Example:
 
 ```bash
-$ equora ipc popup openPopup '' 'MyPopup' 'This is a Title' 'This is a description' 200 ''
+$ au ipc popup openPopup '' 'MyPopup' 'This is a Title' 'This is a description' 200 ''
 ```
 
 If you make the iconPath empty, then it will use no icon.
@@ -43,8 +43,8 @@ That's it for now!
 Here's some example popups
 
 ```bash
-$ equora ipc popup openPopup '' 'Screenshot' 'Screenshot Taken' 'Saved to /home/user/Pictures' 2500 ''
-$ equora ipc popup openPopup '' 'Screentime' 'Your Screentime looks good' 'You spend 13% less time on your computer than last week' 200 'banner'
-$ equora ipc popup openPopup '' 'Trasher' '1.6 GB of trash' 'You should clean up your trash' 2500 'attention'
-$ equora ipc popup openPopup '' 'Meds' 'Remember to take your meds' 'Take them now' 200 'banner,attention'
+$ au ipc popup openPopup '' 'Screenshot' 'Screenshot Taken' 'Saved to /home/user/Pictures' 2500 ''
+$ au ipc popup openPopup '' 'Screentime' 'Your Screentime looks good' 'You spend 13% less time on your computer than last week' 200 'banner'
+$ au ipc popup openPopup '' 'Trasher' '1.6 GB of trash' 'You should clean up your trash' 2500 'attention'
+$ au ipc popup openPopup '' 'Meds' 'Remember to take your meds' 'Take them now' 200 'banner,attention'
 ```

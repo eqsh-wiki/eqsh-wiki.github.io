@@ -8,7 +8,7 @@ summary: Developer-focused CLI Documentation
 # Command Line Interface (CLI)
 
 This page documents the **Aureli CLI tool** (`aureli`).
-It acts as a **runtime controller**, **IPC bridge**, and **configuration editor** for the eqSh desktop.
+It acts as a **runtime controller**, **IPC bridge**, and **configuration editor** for the Aureli desktop.
 
 The CLI is designed for:
 
@@ -16,9 +16,10 @@ The CLI is designed for:
 * Runtime control & debugging
 * JSON config mutation
 * Launching internal UI components
-* Managing eqSh lifecycle
+* Managing Aureli lifecycle
+* Managing Aureli Plugins
 
-The CLI communicates with eqSh through:
+The CLI communicates with Aureli through:
 
 * **Quickshell execution**
 * **Runtime IPC calls**
@@ -74,7 +75,22 @@ Behavior:
 * Executes eqSh via Quickshell
 * Detached by default
 
----
+## `plugin`
+
+| Command      | Alias      | Description                   |
+| ------------- | ---------- | ----------------------------- |
+| install      | i          | Install a plugin                |
+| uninstall    | rm         | Uninstall a plugin              |
+| list        | l          | List installed plugins          |
+| meta        | m          | Get plugin meta                 |
+| update      | u          | Update a plugin                |
+| new        | n          | Create a new plugin              |
+| load        |            | Load a plugin from a directory    |
+| compile    | c          | Compile a plugin                |
+
+```bash
+au plugin [command] [options]
+```
 
 ## `quit`
 
@@ -126,6 +142,8 @@ Installs Aureli from GitHub.
 ```bash
 au install
 ```
+
+## Plugin
 
 ## `installWallpapers`
 

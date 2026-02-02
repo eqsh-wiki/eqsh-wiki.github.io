@@ -10,14 +10,14 @@ A modal is a dialog that is displayed on top of everything and gives the user ac
 
 ## How to create a Modal
 
-You can easily create a modal using the `equora ipc modal instance` command.
+You can easily create a modal using the `au ipc modal instance` command.
 
 instance( **appName**, **title**, **description**, **actionsJsonPath**, **iconPath**, **useIcon** )
 
 Example:
 
 ```bash
-$ equora ipc modal instance "Name" "Title" "Description" "path/to/your/actions.json" "icon.png" true
+$ au ipc modal instance "Name" "Title" "Description" "path/to/your/actions.json" "icon.png" true
 ```
 
 If you make the iconPath empty, then it will use the default icon. (See image above)

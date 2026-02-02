@@ -654,6 +654,36 @@
     <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
         <div data-slot="sidebar-group-label" data-sidebar="group-label"
             class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md px-2 text-xs outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground font-medium">
+            Plugins</div>
+        <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
+            <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
+        data-size="default" href="/03_plugins/plugin/"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
+
+        
+        First Plugin
+        
+
+        
+
+        
+
+        
+    </a>
+</li>
+                
+            </ul>
+        </div>
+    </div>
+    
+    
+    
+    <div data-slot="sidebar-group" data-sidebar="group" class="relative flex w-full min-w-0 flex-col p-2">
+        <div data-slot="sidebar-group-label" data-sidebar="group-label"
+            class="ring-sidebar-ring flex h-8 shrink-0 items-center rounded-md px-2 text-xs outline-hidden transition-[margin,opacity] duration-200 ease-linear focus-visible:ring-2 [&amp;&gt;svg]:size-4 [&amp;&gt;svg]:shrink-0 group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0 text-muted-foreground font-medium">
             Credits</div>
         <div data-slot="sidebar-group-content" data-sidebar="group-content" class="w-full text-sm">
             <ul data-slot="sidebar-menu" data-sidebar="menu" class="flex w-full min-w-0 flex-col gap-0.5">
@@ -783,16 +813,17 @@
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
     <p>This page documents the <strong>Aureli CLI tool</strong> (<code>aureli</code>).
-It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, and <strong>configuration editor</strong> for the eqSh desktop.</p>
+It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, and <strong>configuration editor</strong> for the Aureli desktop.</p>
 <p>The CLI is designed for:</p>
 <ul>
 <li>Developers scripting Aureli behavior</li>
 <li>Runtime control &amp; debugging</li>
 <li>JSON config mutation</li>
 <li>Launching internal UI components</li>
-<li>Managing eqSh lifecycle</li>
+<li>Managing Aureli lifecycle</li>
+<li>Managing Aureli Plugins</li>
 </ul>
-<p>The CLI communicates with eqSh through:</p>
+<p>The CLI communicates with Aureli through:</p>
 <ul>
 <li><strong>Quickshell execution</strong></li>
 <li><strong>Runtime IPC calls</strong></li>
@@ -861,7 +892,61 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
 <li>Executes eqSh via Quickshell</li>
 <li>Detached by default</li>
 </ul>
-<hr />
+<h2 id="plugin"><code>plugin</code><a class="headerlink" href="#plugin" title="Permanent link">&para;</a></h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Alias</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>install</td>
+<td>i</td>
+<td>Install a plugin</td>
+</tr>
+<tr>
+<td>uninstall</td>
+<td>rm</td>
+<td>Uninstall a plugin</td>
+</tr>
+<tr>
+<td>list</td>
+<td>l</td>
+<td>List installed plugins</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>m</td>
+<td>Get plugin meta</td>
+</tr>
+<tr>
+<td>update</td>
+<td>u</td>
+<td>Update a plugin</td>
+</tr>
+<tr>
+<td>new</td>
+<td>n</td>
+<td>Create a new plugin</td>
+</tr>
+<tr>
+<td>load</td>
+<td></td>
+<td>Load a plugin from a directory</td>
+</tr>
+<tr>
+<td>compile</td>
+<td>c</td>
+<td>Compile a plugin</td>
+</tr>
+</tbody>
+</table></div>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>plugin<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
+
 <h2 id="quit"><code>quit</code><a class="headerlink" href="#quit" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code>au<span class="w"> </span>quit
 </code></pre></div>
@@ -895,6 +980,7 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
 <div class="codehilite"><pre><span></span><code>au<span class="w"> </span>install
 </code></pre></div>
 
+<h2 id="plugin_1">Plugin<a class="headerlink" href="#plugin_1" title="Permanent link">&para;</a></h2>
 <h2 id="installwallpapers"><code>installWallpapers</code><a class="headerlink" href="#installwallpapers" title="Permanent link">&para;</a></h2>
 <p>Installs the default Aureli Wallpapers.</p>
 <div class="codehilite"><pre><span></span><code>au<span class="w"> </span>installWallpapers
@@ -1201,6 +1287,21 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
                 </div>
                 
                 <div class="flex flex-col gap-4">
+                    <div class="text-muted-foreground text-sm font-medium">Plugins</div>
+                    
+                    <div class="flex flex-col gap-3">
+                        
+                        <a class="text-2xl font-medium" href="../../03_plugins/plugin/">
+                            
+                            First Plugin
+                            
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                
+                <div class="flex flex-col gap-4">
                     <div class="text-muted-foreground text-sm font-medium">Credits</div>
                     
                     <div class="flex flex-col gap-3">
@@ -1262,6 +1363,12 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
             run
         </a>
         
+        <a href="#plugin"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            plugin
+        </a>
+        
         <a href="#quit"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="3">
@@ -1290,6 +1397,12 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="3">
             install
+        </a>
+        
+        <a href="#plugin_1"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3">
+            Plugin
         </a>
         
         <a href="#installwallpapers"

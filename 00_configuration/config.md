@@ -16,7 +16,7 @@ If you want something simpler take a look at the [Customizing](/02_customization
 
 !!! info ""
     **Note:**  
-    You can edit settings via the built-in application, or use the `equora set` CLI command. Changes are hot-reloaded live.
+    You can edit settings via the built-in application, or use the `au set` CLI command. Changes are hot-reloaded live.
 
 ## Config File Location
 

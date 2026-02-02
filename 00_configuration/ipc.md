@@ -9,12 +9,12 @@ summary: IPC Calls and Commands
 
 ## IPC Calls and Commands
 
-You can use `equora funcs` to see all available functions and commands.
+You can use `au funcs` to see all available functions and commands.
 
-If you want to call a function or command, use `equora ipc` with the namespace, function or command name and the arguments you want to pass.
+If you want to call a function or command, use `au ipc` with the namespace, function or command name and the arguments you want to pass.
 
 !!! note "Example:"
-    `equora ipc eqlock lock`
+    `au ipc eqlock lock`
 
 !!! info ""
     **Note:**

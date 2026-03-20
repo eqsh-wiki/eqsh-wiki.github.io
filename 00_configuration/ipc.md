@@ -7,6 +7,9 @@ title: IPC
 sidebar_title: IPC
 summary: IPC Calls and Commands
 
+!!! danger ""
+    This page is outdated, use [this one](/00_configuration/msg)
+
 ## IPC Calls and Commands
 
 You can use `au funcs` to see all available functions and commands.
@@ -56,6 +59,12 @@ If you want to call a function or command, use `au ipc` with the namespace, func
 | screenshot | toggle() | Toggle screenshot |
 | display    | brighter() | Make the display brighter |
 | display    | dimmer() | Make the display darker |
+| menubar    | set(visible) | Show or hide the menubar |
+| menubar    | toggle() | Toggle the menubar |
+| plugin     | reload() | Reload all plugins |
+| audio      | quieter() | Make the audio quieter |
+| audio      | setVolume(volume) | Set the audio volume |
+| audio      | louder() | Make the audio louder |
 
 ## Advanced IPC Calls
 

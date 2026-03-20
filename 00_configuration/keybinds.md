@@ -37,7 +37,6 @@ Now this is quite annoying to implement, so we already did it for you:
 
 ```text
 bind = $mainMod Control, Q, global, eqsh:lock
-bindl= $mainMod Control, M, global, eqsh:unlock
 bind = $mainMod Control, P, global, eqsh:launchpad
 bindl = $mainMod SHIFT,   5, global, eqsh:screenshot
 bindl = $mainMod SHIFT,   3, global, eqsh:screenshotEntireScreen

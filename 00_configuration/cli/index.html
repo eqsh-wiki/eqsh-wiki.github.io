@@ -497,6 +497,28 @@
                 
                 <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
     <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
+        data-size="default" href="/00_configuration/msg/"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
+
+        
+        Msg
+        
+
+        
+        
+        <span
+    class="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">New</span>
+        
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
         data-size="default" href="/00_configuration/keybinds/"
         class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
@@ -813,7 +835,7 @@
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
     <p>This page documents the <strong>Aureli CLI tool</strong> (<code>aureli</code>).
-It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, and <strong>configuration editor</strong> for the Aureli desktop.</p>
+It acts as a <strong>runtime controller</strong>, <strong>Msg bridge</strong>, and <strong>configuration editor</strong> for the Aureli desktop.</p>
 <p>The CLI is designed for:</p>
 <ul>
 <li>Developers scripting Aureli behavior</li>
@@ -826,7 +848,7 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
 <p>The CLI communicates with Aureli through:</p>
 <ul>
 <li><strong>Quickshell execution</strong></li>
-<li><strong>Runtime IPC calls</strong></li>
+<li><strong>Runtime IPC commands</strong></li>
 <li><strong>Direct JSON config edits</strong></li>
 </ul>
 <hr />
@@ -867,9 +889,9 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
 </tbody>
 </table></div>
 <h1 id="core-commands">Core Commands<a class="headerlink" href="#core-commands" title="Permanent link">&para;</a></h1>
-<h2 id="run"><code>run</code><a class="headerlink" href="#run" title="Permanent link">&para;</a></h2>
+<h2 id="run-r"><code>run</code> (<code>r</code>)<a class="headerlink" href="#run-r" title="Permanent link">&para;</a></h2>
 <p>Start Aureli.</p>
-<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>run
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>run<span class="w"> </span><span class="c1"># or au r</span>
 </code></pre></div>
 
 <div class="table-wrapper"><table>
@@ -970,7 +992,7 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
 <p>Locks the screen.</p>
 <hr />
 <h2 id="update"><code>update</code><a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>update
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>update<span class="w"> </span><span class="o">[</span>cli<span class="p">|</span>aureli<span class="o">]</span>
 </code></pre></div>
 
 <p>Git pulls eqSh repo.</p>
@@ -981,9 +1003,9 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
 </code></pre></div>
 
 <h2 id="plugin_1">Plugin<a class="headerlink" href="#plugin_1" title="Permanent link">&para;</a></h2>
-<h2 id="installwallpapers"><code>installWallpapers</code><a class="headerlink" href="#installwallpapers" title="Permanent link">&para;</a></h2>
+<h2 id="install-wallpapers"><code>install-wallpapers</code><a class="headerlink" href="#install-wallpapers" title="Permanent link">&para;</a></h2>
 <p>Installs the default Aureli Wallpapers.</p>
-<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>installWallpapers
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>install-wallpapers
 </code></pre></div>
 
 <h2 id="configuration-commands">Configuration Commands<a class="headerlink" href="#configuration-commands" title="Permanent link">&para;</a></h2>
@@ -1062,7 +1084,7 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
 <td>App grid</td>
 </tr>
 <tr>
-<td><code>notification_center</code></td>
+<td><code>notification-center</code></td>
 <td>Notification center</td>
 </tr>
 </tbody>
@@ -1080,25 +1102,25 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
 <hr />
 <h2 id="notch-apps">Notch Apps<a class="headerlink" href="#notch-apps" title="Permanent link">&para;</a></h2>
 <h3 id="create">Create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>new_notch_app<span class="w"> </span>MyApp.qml<span class="w"> </span><span class="s2">&quot;Music&quot;</span>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>new-notch-app<span class="w"> </span>MyApp.qml<span class="w"> </span><span class="s2">&quot;Music&quot;</span>
 </code></pre></div>
 
 <h3 id="destroy">Destroy<a class="headerlink" href="#destroy" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>destroy_notch_app
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>destroy-notch-app
 </code></pre></div>
 
 <hr />
-<h1 id="ipc-bridge">IPC Bridge<a class="headerlink" href="#ipc-bridge" title="Permanent link">&para;</a></h1>
-<h2 id="generic-ipc">Generic IPC<a class="headerlink" href="#generic-ipc" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>ipc<span class="w"> </span>&lt;method&gt;<span class="w"> </span><span class="o">[</span>args...<span class="o">]</span>
+<h1 id="msg-bridge">Msg Bridge<a class="headerlink" href="#msg-bridge" title="Permanent link">&para;</a></h1>
+<h2 id="generic-msg">Generic Msg<a class="headerlink" href="#generic-msg" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>msg<span class="w"> </span>&lt;command&gt;<span class="w"> </span>&lt;method&gt;<span class="w"> </span><span class="o">[</span>args...<span class="o">]</span>
 </code></pre></div>
 
 <p>Example:</p>
-<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>ipc<span class="w"> </span>eqlock<span class="w"> </span>lock
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>msg<span class="w"> </span>lock<span class="w"> </span>lock
 </code></pre></div>
 
-<h2 id="show-ipc-functions">Show IPC Functions<a class="headerlink" href="#show-ipc-functions" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>funcs
+<h2 id="show-msg-commands">Show Msg Commands<a class="headerlink" href="#show-msg-commands" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>msg
 </code></pre></div>
 
 <p>Lists exposed IPC endpoints.</p>
@@ -1219,6 +1241,12 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
                         <a class="text-2xl font-medium" href="../ipc/">
                             
                             IPC
+                            
+                        </a>
+                        
+                        <a class="text-2xl font-medium" href="../msg/">
+                            
+                            Msg
                             
                         </a>
                         
@@ -1357,10 +1385,10 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
         </a>
         
         
-        <a href="#run"
+        <a href="#run-r"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="3">
-            run
+            run (r)
         </a>
         
         <a href="#plugin"
@@ -1405,10 +1433,10 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
             Plugin
         </a>
         
-        <a href="#installwallpapers"
+        <a href="#install-wallpapers"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="3">
-            installWallpapers
+            install-wallpapers
         </a>
         
         <a href="#configuration-commands"
@@ -1460,23 +1488,23 @@ It acts as a <strong>runtime controller</strong>, <strong>IPC bridge</strong>, a
         
 
         
-        <a href="#ipc-bridge"
+        <a href="#msg-bridge"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="2">
-            IPC Bridge
+            Msg Bridge
         </a>
         
         
-        <a href="#generic-ipc"
+        <a href="#generic-msg"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="3">
-            Generic IPC
+            Generic Msg
         </a>
         
-        <a href="#show-ipc-functions"
+        <a href="#show-msg-commands"
             class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
             data-active="false" data-depth="3">
-            Show IPC Functions
+            Show Msg Commands
         </a>
         
         

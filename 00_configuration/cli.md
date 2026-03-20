@@ -5,10 +5,10 @@ author: enviction
 image: ../assets/eqsh.svg
 summary: Developer-focused CLI Documentation
 
-# Command Line Interface (CLI)
+# Command Line Interface
 
 This page documents the **Aureli CLI tool** (`aureli`).
-It acts as a **runtime controller**, **IPC bridge**, and **configuration editor** for the Aureli desktop.
+It acts as a **runtime controller**, **Msg bridge**, and **configuration editor** for the Aureli desktop.
 
 The CLI is designed for:
 
@@ -22,7 +22,7 @@ The CLI is designed for:
 The CLI communicates with Aureli through:
 
 * **Quickshell execution**
-* **Runtime IPC calls**
+* **Runtime IPC commands**
 * **Direct JSON config edits**
 
 ---
@@ -57,12 +57,12 @@ Default:
 
 # Core Commands
 
-## `run`
+## `run` (`r`)
 
 Start Aureli.
 
 ```bash
-au run
+au run # or au r
 ```
 
 | Option  | Description                   |
@@ -128,7 +128,7 @@ Locks the screen.
 ## `update`
 
 ```bash
-au update
+au update [cli|aureli]
 ```
 
 Git pulls eqSh repo.
@@ -145,12 +145,12 @@ au install
 
 ## Plugin
 
-## `installWallpapers`
+## `install-wallpapers`
 
 Installs the default Aureli Wallpapers.
 
 ```bash
-au installWallpapers
+au install-wallpapers
 ```
 
 ## Configuration Commands
@@ -218,7 +218,7 @@ These toggle or spawn UI systems.
 | --------------------- | ------------------- |
 | `settings`            | Settings window     |
 | `launchpad`           | App grid            |
-| `notification_center` | Notification center |
+| `notification-center` | Notification center |
 
 ---
 
@@ -243,35 +243,35 @@ systemDialogs.newDialog
 ### Create
 
 ```bash
-au new_notch_app MyApp.qml "Music"
+au new-notch-app MyApp.qml "Music"
 ```
 
 ### Destroy
 
 ```bash
-au destroy_notch_app
+au destroy-notch-app
 ```
 
 ---
 
-# IPC Bridge
+# Msg Bridge
 
-## Generic IPC
+## Generic Msg
 
 ```bash
-au ipc <method> [args...]
+au msg <command> <method> [args...]
 ```
 
 Example:
 
 ```bash
-au ipc eqlock lock
+au msg lock lock
 ```
 
-## Show IPC Functions
+## Show Msg Commands
 
 ```bash
-au funcs
+au msg
 ```
 
 Lists exposed IPC endpoints.

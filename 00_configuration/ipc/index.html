@@ -529,6 +529,28 @@
                 
                 <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
     <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
+        data-size="default" href="/00_configuration/msg/"
+        class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
+
+        
+        Msg
+        
+
+        
+        
+        <span
+    class="ml-2 rounded-md bg-[#adfa1d] px-1.5 py-0.5 text-xs leading-none text-[#000000] no-underline group-hover:no-underline">New</span>
+        
+        
+
+        
+
+        
+    </a>
+</li>
+                
+                <li data-slot="sidebar-menu-item" data-sidebar="menu-item" class="group/menu-item relative">
+    <a data-slot="sidebar-menu-button" data-active="false" data-sidebar="menu-button"
         data-size="default" href="/00_configuration/keybinds/"
         class="hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer/menu-button flex items-center gap-2 rounded-md p-2 text-left outline-hidden ring-sidebar-ring transition-[width,height,padding] focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0 data-[active=true]:bg-accent data-[active=true]:border-accent 3xl:fixed:w-full 3xl:fixed:max-w-48 relative h-[30px] w-fit overflow-visible border border-transparent text-[0.8rem] font-medium after:absolute after:inset-x-0 after:-inset-y-1 after:z-0 after:rounded-md">
 
@@ -844,7 +866,10 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    <h2 id="ipc-calls-and-commands">IPC Calls and Commands<a class="headerlink" href="#ipc-calls-and-commands" title="Permanent link">&para;</a></h2>
+    <div class="admonition danger">
+<p>This page is outdated, use <a href="/00_configuration/msg">this one</a></p>
+</div>
+<h2 id="ipc-calls-and-commands">IPC Calls and Commands<a class="headerlink" href="#ipc-calls-and-commands" title="Permanent link">&para;</a></h2>
 <p>You can use <code>au funcs</code> to see all available functions and commands.</p>
 <p>If you want to call a function or command, use <code>au ipc</code> with the namespace, function or command name and the arguments you want to pass.</p>
 <div class="admonition note">
@@ -1025,6 +1050,36 @@ Some of these commands need further explanation. At the bottom of this page, you
 <td>dimmer()</td>
 <td>Make the display darker</td>
 </tr>
+<tr>
+<td>menubar</td>
+<td>set(visible)</td>
+<td>Show or hide the menubar</td>
+</tr>
+<tr>
+<td>menubar</td>
+<td>toggle()</td>
+<td>Toggle the menubar</td>
+</tr>
+<tr>
+<td>plugin</td>
+<td>reload()</td>
+<td>Reload all plugins</td>
+</tr>
+<tr>
+<td>audio</td>
+<td>quieter()</td>
+<td>Make the audio quieter</td>
+</tr>
+<tr>
+<td>audio</td>
+<td>setVolume(volume)</td>
+<td>Set the audio volume</td>
+</tr>
+<tr>
+<td>audio</td>
+<td>louder()</td>
+<td>Make the audio louder</td>
+</tr>
 </tbody>
 </table></div>
 <h2 id="advanced-ipc-calls">Advanced IPC Calls<a class="headerlink" href="#advanced-ipc-calls" title="Permanent link">&para;</a></h2>
@@ -1159,6 +1214,12 @@ Some of these commands need further explanation. At the bottom of this page, you
                         <a class="text-2xl font-medium" href="./">
                             
                             IPC
+                            
+                        </a>
+                        
+                        <a class="text-2xl font-medium" href="../msg/">
+                            
+                            Msg
                             
                         </a>
                         

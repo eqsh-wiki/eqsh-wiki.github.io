@@ -126,7 +126,7 @@ Global system behavior.
 | Key                     | Type   | Default Value | Description                       |
 | ----------------------- | ------ | ------------- | --------------------------------- |
 | `enable`                | bool   | `true`        | Enable notch                      |
-| `camera`                | bool   | `true`        | Fake camera inside notch          |
+| `camera`                | bool   | `false`       | Fake camera inside notch          |
 | `islandMode`            | bool   | `false`       | Dynamic Island mode               |
 | `backgroundColor`       | color  | `#000`        | Background                        |
 | `color`                 | color  | `#fff`        | Foreground                        |
@@ -144,7 +144,7 @@ Global system behavior.
 | `signature`             | string | `""`          | Idle text                         |
 | `signatureColor`        | color  | `#fff`        | Signature color                   |
 | `autohide`              | bool   | `false`       | Hide when unused                  |
-| `interactiveLockscreen` | bool   | `false`       | HIGH RISK: interactive lockscreen |
+| `interactiveLockscreen` | bool   | `false`       | interactive lockscreen            |
 
 ## `dock`
 

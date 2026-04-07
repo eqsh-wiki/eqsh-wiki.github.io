@@ -36,19 +36,19 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to the eqSh Wiki - Eqsh Wiki</title>
+    <title>Cli - Eqsh Wiki</title>
     
 
 
-<title>Welcome to the eqSh Wiki</title>
+<title>Cli</title>
 
 
 
-<meta name="description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
+<meta name="description" content="Developer-focused documentation for the Aureli CLI, IPC bridge, runtime control, and configuration tooling.">
 
 
 
-<meta name="keywords" content="docs, eqsh, desktop, linux, equora, quickshell, hyprland">
+<meta name="keywords" content="docs, cli, aureli, eqsh, quickshell, hyprland, linux, ipc">
 
 
 
@@ -56,98 +56,66 @@
 
 
 
-<link rel="canonical" href="https://eqsh-wiki.github.io/">
+<link rel="canonical" href="https://eqsh-wiki.github.io/configuration/cli/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Welcome to the eqSh Wiki">
+<meta property="og:title" content="Cli">
 
 
 
-<meta property="og:description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
+<meta property="og:description" content="Developer-focused documentation for the Aureli CLI, IPC bridge, runtime control, and configuration tooling.">
 
 
 
-<meta property="og:url" content="https://eqsh-wiki.github.io/">
+<meta property="og:url" content="https://eqsh-wiki.github.io/configuration/cli/">
 
 
 
-<meta property="og:image" content="./assets/eqsh.svg">
+<meta property="og:image" content="../assets/eqsh.svg">
 
 
 
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Welcome to the eqSh Wiki">
+<meta name="twitter:title" content="Cli">
 
 
 
-<meta name="twitter:description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
+<meta name="twitter:description" content="Developer-focused documentation for the Aureli CLI, IPC bridge, runtime control, and configuration tooling.">
 
 
 
-<meta name="twitter:image" content="./assets/eqsh.svg">
+<meta name="twitter:image" content="../assets/eqsh.svg">
 
 
 <!-- JSON-LD Structured Data -->
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Welcome to the eqSh Wiki",
-    "url": "https://eqsh-wiki.github.io/",
-    "description": "Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.",
-    
-    "author": {
-      "@type": "Person",
-      "name": "enviction"
-    },
-    
-    
-    
-    
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://eqsh-wiki.github.io/"
-    },
-    
-    
-    "image": {
-      "@type": "ImageObject",
-      "url": "./assets/eqsh.svg",
-      "width": 1200,
-      "height": 630
-    }
-    
-  }
-  </script>
 
 
+    <link rel="icon" href="../../img/favicon.ico">
 
-    <link rel="icon" href="img/favicon.ico">
-
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/geist.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/geist.css" rel="stylesheet">
 
     
     
 
 <link id="pygments-light" rel="stylesheet"
-    href="css/pygments/shadcn-light.css">
+    href="../../css/pygments/shadcn-light.css">
 <link id="pygments-dark" rel="stylesheet"
-    href="css/pygments/github-dark.css"
+    href="../../css/pygments/github-dark.css"
     media="(prefers-color-scheme: dark)">
 
 
     
-    <link href="css/images.css" rel="stylesheet">
+    <link href="../../css/images.css" rel="stylesheet">
 
     
 
-    <script src="js/callbacks.js"></script>
+    <script src="../../js/callbacks.js"></script>
 
     
 
@@ -189,7 +157,7 @@
                 <span class="size-8 flex flex-row justify-center items-center">
                     
 
-<img class="size-5" src="assets/eqsh.svg" alt="icon">
+<img class="size-5" src="../../assets/eqsh.svg" alt="icon">
 
 
                 </span>
@@ -203,7 +171,7 @@
   
   
     <a class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all hover:bg-accent hover:text-accent-foreground h-8 rounded-md gap-1.5 px-3"
-      href="about/">
+      href="../../about/">
       About
     </a>
   
@@ -739,7 +707,7 @@
 
 <div 
     x-data="{ open: true }"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md "
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md bg-popover"
     data-required-link=""
 >
     
@@ -1554,13 +1522,13 @@
     <div class="flex flex-col gap-2">
       <div id="page-header" class="flex items-start justify-between">
         <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-          Welcome to the eqSh Wiki
+          Cli
         </h1>
 
         <div class="flex items-center gap-2 pt-1.5">
           
 <button
-    onclick="fetch(`https://eqsh-wiki.github.io/index.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))"
+    onclick="fetch(`https://eqsh-wiki.github.io/configuration/cli.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))"
     data-slot="button" class="secondary cursor-pointer">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-copy ">
@@ -1572,10 +1540,23 @@
     <span class="max-md:hidden">Copy Page</span>
 </button>
           
+          <a data-slot="button" id="previous-button"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
+            href="/configuration/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="tabler-icon tabler-icon-arrow-left">
+              <path d="M5 12l14 0"></path>
+              <path d="M5 12l6 6"></path>
+              <path d="M5 12l6 -6"></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </a>
+          
           
           <a data-slot="button" id="next-button"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-            href="/faq/">
+            href="/configuration/config/">
             <span class="sr-only">Next</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1589,6 +1570,10 @@
         </div>
       </div>
       
+      <p id="summary" class="text-muted-foreground text-[1.05rem] text-balance sm:text-base">
+        Developer-focused CLI Documentation
+      </p>
+      
     </div>
     <div class="flex justify-end items-center">
         <div class="grow text-muted-foreground pt-4 flex flex-row justify-end items-center">
@@ -1599,7 +1584,296 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    <p>This wiki is a collection of documentation for <a href="https://github.com/eq-desktop/eqsh">eqSh</a>, a Quickshell-based shell for <a href="https://hypr.land">Hyprland</a>.</p>
+    <p>This page documents the <strong>Aureli CLI tool</strong> (<code>aureli</code>).
+It acts as a <strong>runtime controller</strong>, <strong>Msg bridge</strong>, and <strong>configuration editor</strong> for the Aureli desktop.</p>
+<p>The CLI is designed for:</p>
+<ul>
+<li>Developers scripting Aureli behavior</li>
+<li>Runtime control &amp; debugging</li>
+<li>JSON config mutation</li>
+<li>Launching internal UI components</li>
+<li>Managing Aureli lifecycle</li>
+<li>Managing Aureli Plugins</li>
+</ul>
+<p>The CLI communicates with Aureli through:</p>
+<ul>
+<li><strong>Quickshell execution</strong></li>
+<li><strong>Runtime IPC commands</strong></li>
+<li><strong>Direct JSON config edits</strong></li>
+</ul>
+<hr />
+<h2 id="binary">Binary<a class="headerlink" href="#binary" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code class="language-bash">au [command] [options]
+</code></pre>
+
+<p>You can override the Aureli installation path:</p>
+<pre class="codehilite"><code class="language-bash">au -l /custom/path run
+</code></pre>
+
+<p>Default:</p>
+<pre class="codehilite"><code class="language-text">~/.local/share/equora/eqsh
+</code></pre>
+
+<hr />
+<h2 id="runtime-paths">Runtime Paths<a class="headerlink" href="#runtime-paths" title="Permanent link">&para;</a></h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Path</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>~/.local/share/equora/eqsh</code></td>
+<td>Aureli installation</td>
+</tr>
+<tr>
+<td><code>~/.config/aureli/config.json</code></td>
+<td>Runtime config</td>
+</tr>
+<tr>
+<td><code>~/.config/aureli/runtime</code></td>
+<td>Running instance metadata (PID etc.)</td>
+</tr>
+</tbody>
+</table></div>
+<h1 id="core-commands">Core Commands<a class="headerlink" href="#core-commands" title="Permanent link">&para;</a></h1>
+<h2 id="run-r"><code>run</code> (<code>r</code>)<a class="headerlink" href="#run-r" title="Permanent link">&para;</a></h2>
+<p>Start Aureli.</p>
+<pre class="codehilite"><code class="language-bash">au run # or au r
+</code></pre>
+
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--dev</code></td>
+<td>Runs in foreground (dev mode)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Behavior:</p>
+<ul>
+<li>Prevents double launch</li>
+<li>Executes eqSh via Quickshell</li>
+<li>Detached by default</li>
+</ul>
+<h2 id="plugin"><code>plugin</code><a class="headerlink" href="#plugin" title="Permanent link">&para;</a></h2>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Alias</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>install</td>
+<td>i</td>
+<td>Install a plugin</td>
+</tr>
+<tr>
+<td>uninstall</td>
+<td>rm</td>
+<td>Uninstall a plugin</td>
+</tr>
+<tr>
+<td>list</td>
+<td>l</td>
+<td>List installed plugins</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>m</td>
+<td>Get plugin meta</td>
+</tr>
+<tr>
+<td>update</td>
+<td>u</td>
+<td>Update a plugin</td>
+</tr>
+<tr>
+<td>new</td>
+<td>n</td>
+<td>Create a new plugin</td>
+</tr>
+<tr>
+<td>load</td>
+<td></td>
+<td>Load a plugin from a directory</td>
+</tr>
+<tr>
+<td>compile</td>
+<td>c</td>
+<td>Compile a plugin</td>
+</tr>
+</tbody>
+</table></div>
+<pre class="codehilite"><code class="language-bash">au plugin [command] [options]
+</code></pre>
+
+<h2 id="quit"><code>quit</code><a class="headerlink" href="#quit" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code class="language-bash">au quit
+</code></pre>
+
+<p>Force kills Aureli using SIGKILL.</p>
+<hr />
+<h2 id="restart"><code>restart</code><a class="headerlink" href="#restart" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code class="language-bash">au restart
+</code></pre>
+
+<p>Sequence:</p>
+<ol>
+<li>Kill running instance</li>
+<li>Relaunch eqSh</li>
+</ol>
+<hr />
+<h2 id="lock"><code>lock</code><a class="headerlink" href="#lock" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code class="language-bash">au lock
+</code></pre>
+
+<p>Locks the screen.</p>
+<hr />
+<h2 id="update"><code>update</code><a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code class="language-bash">au update [cli|aureli]
+</code></pre>
+
+<p>Git pulls eqSh repo.</p>
+<hr />
+<h2 id="install"><code>install</code><a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
+<p>Installs Aureli from GitHub.</p>
+<pre class="codehilite"><code class="language-bash">au install
+</code></pre>
+
+<h2 id="plugin_1">Plugin<a class="headerlink" href="#plugin_1" title="Permanent link">&para;</a></h2>
+<h2 id="install-wallpapers"><code>install-wallpapers</code><a class="headerlink" href="#install-wallpapers" title="Permanent link">&para;</a></h2>
+<p>Installs the default Aureli Wallpapers.</p>
+<pre class="codehilite"><code class="language-bash">au install-wallpapers
+</code></pre>
+
+<h2 id="configuration-commands">Configuration Commands<a class="headerlink" href="#configuration-commands" title="Permanent link">&para;</a></h2>
+<h2 id="set"><code>set</code><a class="headerlink" href="#set" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code class="language-bash">au set bar.height 40
+</code></pre>
+
+<p>Supports automatic type casting:</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Stored As</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>42</code></td>
+<td>int</td>
+</tr>
+<tr>
+<td><code>3.14</code></td>
+<td>float</td>
+</tr>
+<tr>
+<td><code>true/false</code></td>
+<td>bool</td>
+</tr>
+<tr>
+<td>other</td>
+<td>string</td>
+</tr>
+</tbody>
+</table></div>
+<p>Nested paths use dot notation:</p>
+<pre class="codehilite"><code class="language-bash">aureli set appearance.accentColor &quot;#ff00ff&quot;
+</code></pre>
+
+<p>Hot-reload occurs via eqSh file watchers.</p>
+<h2 id="get"><code>get</code><a class="headerlink" href="#get" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code class="language-bash">au get bar.height
+</code></pre>
+
+<p>Special:</p>
+<pre class="codehilite"><code class="language-bash">au get all
+</code></pre>
+
+<p>Lists top-level sections.</p>
+<hr />
+<h2 id="reset"><code>reset</code><a class="headerlink" href="#reset" title="Permanent link">&para;</a></h2>
+<p>Delete a config key.</p>
+<pre class="codehilite"><code class="language-bash">au reset bar.height
+</code></pre>
+
+<p>Reset everything:</p>
+<pre class="codehilite"><code class="language-bash">au reset --all
+</code></pre>
+
+<p>⚠ Requires restart.</p>
+<h1 id="ui-control-commands">UI Control Commands<a class="headerlink" href="#ui-control-commands" title="Permanent link">&para;</a></h1>
+<p>These toggle or spawn UI systems.</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>IPC Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>settings</code></td>
+<td>Settings window</td>
+</tr>
+<tr>
+<td><code>launchpad</code></td>
+<td>App grid</td>
+</tr>
+<tr>
+<td><code>notification-center</code></td>
+<td>Notification center</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="dialogs">Dialogs<a class="headerlink" href="#dialogs" title="Permanent link">&para;</a></h2>
+<p>Create system dialog:</p>
+<pre class="codehilite"><code class="language-bash">au dialog &lt;app&gt; &lt;icon&gt; &lt;title&gt; &lt;desc&gt; &lt;accept&gt; &lt;decline&gt; &lt;cmdA&gt; &lt;cmdD&gt; &lt;style&gt;
+</code></pre>
+
+<p>Bridges to:</p>
+<pre class="codehilite"><code class="language-text">systemDialogs.newDialog
+</code></pre>
+
+<hr />
+<h2 id="notch-apps">Notch Apps<a class="headerlink" href="#notch-apps" title="Permanent link">&para;</a></h2>
+<h3 id="create">Create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
+<pre class="codehilite"><code class="language-bash">au new-notch-app MyApp.qml &quot;Music&quot;
+</code></pre>
+
+<h3 id="destroy">Destroy<a class="headerlink" href="#destroy" title="Permanent link">&para;</a></h3>
+<pre class="codehilite"><code class="language-bash">au destroy-notch-app
+</code></pre>
+
+<hr />
+<h1 id="msg-bridge">Msg Bridge<a class="headerlink" href="#msg-bridge" title="Permanent link">&para;</a></h1>
+<h2 id="generic-msg">Generic Msg<a class="headerlink" href="#generic-msg" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code class="language-bash">au msg &lt;command&gt; &lt;method&gt; [args...]
+</code></pre>
+
+<p>Example:</p>
+<pre class="codehilite"><code class="language-bash">au msg lock lock
+</code></pre>
+
+<h2 id="show-msg-commands">Show Msg Commands<a class="headerlink" href="#show-msg-commands" title="Permanent link">&para;</a></h2>
+<pre class="codehilite"><code class="language-bash">au msg
+</code></pre>
+
+<p>Lists exposed IPC endpoints.</p>
   </div>
   
   <script>
@@ -1610,11 +1884,24 @@
 </article>
                                 <div class="mx-auto flex flex-wrap h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">
     
+    <a data-slot="button"
+        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none"
+        href="/configuration/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tabler-icon tabler-icon-arrow-left ">
+            <path d="M5 12l14 0"></path>
+            <path d="M5 12l6 6"></path>
+            <path d="M5 12l6 -6"></path>
+        </svg>
+        <span class="max-[500px]:hidden">Index</span>
+    </a>
+    
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 ml-auto shadow-none"
-        href="/faq/">
-        <span class="max-[500px]:hidden">FAQ</span>
+        href="/configuration/config/">
+        <span class="max-[500px]:hidden">Config</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="tabler-icon tabler-icon-arrow-right ">
@@ -1641,43 +1928,43 @@
                 <div class="text-muted-foreground text-sm font-medium">Menu</div>
                 <div class="flex flex-col gap-3">
                     
-                    <a class="text-2xl font-medium" href=".">
+                    <a class="text-2xl font-medium" href="../..">
                         
                         Home
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="faq/">
+                    <a class="text-2xl font-medium" href="../../faq/">
                         
                         FAQ
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="getstarted/">
+                    <a class="text-2xl font-medium" href="../../getstarted/">
                         
                         Get started
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="install/">
+                    <a class="text-2xl font-medium" href="../../install/">
                         
                         Install
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="roadmap/">
+                    <a class="text-2xl font-medium" href="../../roadmap/">
                         
                         Roadmap
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="showcase/">
+                    <a class="text-2xl font-medium" href="../../showcase/">
                         
                         Showcase
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="versions/">
+                    <a class="text-2xl font-medium" href="../../versions/">
                         
                         Versions
                         
@@ -1695,37 +1982,37 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="configuration/">
+                        <a class="text-2xl font-medium" href="../">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/cli/">
+                        <a class="text-2xl font-medium" href="./">
                             
                             Cli
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/config/">
+                        <a class="text-2xl font-medium" href="../config/">
                             
                             Config
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/ipc/">
+                        <a class="text-2xl font-medium" href="../ipc/">
                             
                             IPC
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/keybinds/">
+                        <a class="text-2xl font-medium" href="../keybinds/">
                             
                             Keybinds
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/msg/">
+                        <a class="text-2xl font-medium" href="../msg/">
                             
                             Msg
                             
@@ -1740,13 +2027,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="credits/">
+                        <a class="text-2xl font-medium" href="../../credits/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="credits/credits/">
+                        <a class="text-2xl font-medium" href="../../credits/credits/">
                             
                             Credits
                             
@@ -1761,13 +2048,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="customization/">
+                        <a class="text-2xl font-medium" href="../../customization/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="customization/customizing/">
+                        <a class="text-2xl font-medium" href="../../customization/customizing/">
                             
                             Customizing
                             
@@ -1782,37 +2069,37 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="development/">
+                        <a class="text-2xl font-medium" href="../../development/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/advancednotch/">
+                        <a class="text-2xl font-medium" href="../../development/advancednotch/">
                             
                             Advanced Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/firstnotch/">
+                        <a class="text-2xl font-medium" href="../../development/firstnotch/">
                             
                             First Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/modal/">
+                        <a class="text-2xl font-medium" href="../../development/modal/">
                             
                             Modals
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/notch/">
+                        <a class="text-2xl font-medium" href="../../development/notch/">
                             
                             Notch
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/popup/">
+                        <a class="text-2xl font-medium" href="../../development/popup/">
                             
                             Popups
                             
@@ -1827,13 +2114,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="plugins/">
+                        <a class="text-2xl font-medium" href="../../plugins/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="plugins/plugin/">
+                        <a class="text-2xl font-medium" href="../../plugins/plugin/">
                             
                             First Plugin
                             
@@ -1857,6 +2144,160 @@
                                 <div id="toc" view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
+        
+        
+        
+        
+        <a href="#binary"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#binary');">
+            Binary
+        </a>
+        
+
+        
+        <a href="#runtime-paths"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#runtime-paths');">
+            Runtime Paths
+        </a>
+        
+
+        
+        <a href="#core-commands"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#core-commands');">
+            Core Commands
+        </a>
+        
+        
+        <a href="#run-r"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#run-r');">
+            run (r)
+        </a>
+        
+        <a href="#plugin"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#plugin');">
+            plugin
+        </a>
+        
+        <a href="#quit"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#quit');">
+            quit
+        </a>
+        
+        <a href="#restart"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#restart');">
+            restart
+        </a>
+        
+        <a href="#lock"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#lock');">
+            lock
+        </a>
+        
+        <a href="#update"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#update');">
+            update
+        </a>
+        
+        <a href="#install"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#install');">
+            install
+        </a>
+        
+        <a href="#plugin_1"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#plugin_1');">
+            Plugin
+        </a>
+        
+        <a href="#install-wallpapers"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#install-wallpapers');">
+            install-wallpapers
+        </a>
+        
+        <a href="#configuration-commands"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#configuration-commands');">
+            Configuration Commands
+        </a>
+        
+        <a href="#set"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#set');">
+            set
+        </a>
+        
+        <a href="#get"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#get');">
+            get
+        </a>
+        
+        <a href="#reset"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#reset');">
+            reset
+        </a>
+        
+        
+
+        
+        <a href="#ui-control-commands"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#ui-control-commands');">
+            UI Control Commands
+        </a>
+        
+        
+        <a href="#dialogs"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#dialogs');">
+            Dialogs
+        </a>
+        
+        <a href="#notch-apps"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#notch-apps');">
+            Notch Apps
+        </a>
+        
+        
+
+        
+        <a href="#msg-bridge"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#msg-bridge');">
+            Msg Bridge
+        </a>
+        
+        
+        <a href="#generic-msg"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#generic-msg');">
+            Generic Msg
+        </a>
+        
+        <a href="#show-msg-commands"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#show-msg-commands');">
+            Show Msg Commands
+        </a>
+        
+        
+
+        
+        
+        
         
 
     </div>
@@ -1886,12 +2327,12 @@
     </div>
      
 
-<script src="search/main.js"></script>
+<script src="../../search/main.js"></script>
 
 
     
 
-    <script src="js/copy-button.js"></script>
+    <script src="../../js/copy-button.js"></script>
     <script>updatePygmentsStylesheet();</script>
     
     <script>fetchStargazers("https://github.com/eq-desktop/eqsh");</script>

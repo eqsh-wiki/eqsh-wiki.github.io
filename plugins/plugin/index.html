@@ -36,118 +36,74 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to the eqSh Wiki - Eqsh Wiki</title>
+    <title>Your First Aureli Plugin - Eqsh Wiki</title>
     
 
 
-<title>Welcome to the eqSh Wiki</title>
+<title>Your First Aureli Plugin</title>
 
 
 
-<meta name="description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
 
 
 
-<meta name="keywords" content="docs, eqsh, desktop, linux, equora, quickshell, hyprland">
+
+<meta name="author" content="Eq Desktop">
 
 
 
-<meta name="author" content="enviction">
-
-
-
-<link rel="canonical" href="https://eqsh-wiki.github.io/">
+<link rel="canonical" href="https://eqsh-wiki.github.io/plugins/plugin/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Welcome to the eqSh Wiki">
+<meta property="og:title" content="Your First Aureli Plugin">
 
 
 
-<meta property="og:description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
 
 
-
-<meta property="og:url" content="https://eqsh-wiki.github.io/">
-
+<meta property="og:url" content="https://eqsh-wiki.github.io/plugins/plugin/">
 
 
-<meta property="og:image" content="./assets/eqsh.svg">
 
 
 
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Welcome to the eqSh Wiki">
+<meta name="twitter:title" content="Your First Aureli Plugin">
 
 
 
-<meta name="twitter:description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
 
-
-
-<meta name="twitter:image" content="./assets/eqsh.svg">
 
 
 <!-- JSON-LD Structured Data -->
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Welcome to the eqSh Wiki",
-    "url": "https://eqsh-wiki.github.io/",
-    "description": "Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.",
-    
-    "author": {
-      "@type": "Person",
-      "name": "enviction"
-    },
-    
-    
-    
-    
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://eqsh-wiki.github.io/"
-    },
-    
-    
-    "image": {
-      "@type": "ImageObject",
-      "url": "./assets/eqsh.svg",
-      "width": 1200,
-      "height": 630
-    }
-    
-  }
-  </script>
 
 
+    <link rel="icon" href="../../img/favicon.ico">
 
-    <link rel="icon" href="img/favicon.ico">
-
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/geist.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/geist.css" rel="stylesheet">
 
     
     
 
 <link id="pygments-light" rel="stylesheet"
-    href="css/pygments/shadcn-light.css">
+    href="../../css/pygments/shadcn-light.css">
 <link id="pygments-dark" rel="stylesheet"
-    href="css/pygments/github-dark.css"
+    href="../../css/pygments/github-dark.css"
     media="(prefers-color-scheme: dark)">
 
 
     
-    <link href="css/images.css" rel="stylesheet">
+    <link href="../../css/images.css" rel="stylesheet">
 
     
 
-    <script src="js/callbacks.js"></script>
+    <script src="../../js/callbacks.js"></script>
 
     
 
@@ -189,7 +145,7 @@
                 <span class="size-8 flex flex-row justify-center items-center">
                     
 
-<img class="size-5" src="assets/eqsh.svg" alt="icon">
+<img class="size-5" src="../../assets/eqsh.svg" alt="icon">
 
 
                 </span>
@@ -203,7 +159,7 @@
   
   
     <a class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all hover:bg-accent hover:text-accent-foreground h-8 rounded-md gap-1.5 px-3"
-      href="about/">
+      href="../../about/">
       About
     </a>
   
@@ -1326,7 +1282,7 @@
 
 <div 
     x-data="{ open: true }"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md "
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md bg-popover"
     data-required-link=""
 >
     
@@ -1554,13 +1510,13 @@
     <div class="flex flex-col gap-2">
       <div id="page-header" class="flex items-start justify-between">
         <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-          Welcome to the eqSh Wiki
+          Your First Aureli Plugin
         </h1>
 
         <div class="flex items-center gap-2 pt-1.5">
           
 <button
-    onclick="fetch(`https://eqsh-wiki.github.io/index.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))"
+    onclick="fetch(`https://eqsh-wiki.github.io/plugins/plugin.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))"
     data-slot="button" class="secondary cursor-pointer">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-copy ">
@@ -1572,19 +1528,19 @@
     <span class="max-md:hidden">Copy Page</span>
 </button>
           
-          
-          <a data-slot="button" id="next-button"
+          <a data-slot="button" id="previous-button"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-            href="/faq/">
-            <span class="sr-only">Next</span>
+            href="/plugins/">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-              class="tabler-icon tabler-icon-arrow-right">
+              class="tabler-icon tabler-icon-arrow-left">
               <path d="M5 12l14 0"></path>
-              <path d="M13 18l6 -6"></path>
-              <path d="M13 6l6 6"></path>
+              <path d="M5 12l6 6"></path>
+              <path d="M5 12l6 -6"></path>
             </svg>
+            <span class="sr-only">Previous</span>
           </a>
+          
           
         </div>
       </div>
@@ -1599,7 +1555,191 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    <p>This wiki is a collection of documentation for <a href="https://github.com/eq-desktop/eqsh">eqSh</a>, a Quickshell-based shell for <a href="https://hypr.land">Hyprland</a>.</p>
+    <p>So you want to make an Aureli plugin? Here's how to get started.</p>
+<p>A plugin is a modular piece of functionality for Aureli. It can provide widgets, services, or integrate with the system. All Aureli plugins are described using a <strong>Kavo file</strong>, usually called <code>plugin.kvo</code>.</p>
+<hr />
+<h2 id="plugin-structure">Plugin Structure<a class="headerlink" href="#plugin-structure" title="Permanent link">&para;</a></h2>
+<p>At the core of every plugin is a <code>plugin.kvo</code> file. Here's an example:</p>
+<pre class="codehilite"><code class="language-kavo">plugin &quot;aureli-base&quot; {
+
+    meta {
+        name: &quot;Base Aureli System&quot;
+        version: &quot;0.1.0&quot;
+        api: &quot;Elephant-1&quot;
+        description: &quot;This is the Base plugin for all Aureli Widgets&quot;
+        author: &quot;Eq Desktop&quot;
+    }
+
+    @import &quot;Weather.kvo&quot;
+
+    widget {
+        meta {
+            name: &quot;Image&quot;
+            id: &quot;image&quot;
+        }
+        onRender() {
+            import QtQuick
+            import Quickshell.Widgets
+            import qs.ui.controls.primitives
+            import QtQuick.Layouts
+            import QtQuick.Controls
+            import qs.ui.controls.providers
+            import qs.ui.controls.auxiliary.widget
+            import qs.config
+            import qs
+            WidgetItem {
+                id: root
+
+                ClippingRectangle {
+                    anchors.fill: parent
+                    anchors.margins: 4
+                    radius: 22
+                    color: &quot;transparent&quot;
+                    CFI {
+                        id: bg
+                        anchors.fill: parent
+                        colorized: false
+                        fillMode: root.options?.fill || true ? Image.PreserveAspectCrop : Image.PreserveAspectFit
+                        source: root.options?.source || &quot;&quot;
+                    }
+                }
+            }
+        }
+
+        onPlacement(data) {
+            data.allow()
+        }
+    }
+
+}
+</code></pre>
+
+<h3 id="breaking-it-down">Breaking It Down<a class="headerlink" href="#breaking-it-down" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong><code>plugin "id"</code></strong>
+   This declares the plugin and its internal ID. The ID is used for installing, updating, and managing the plugin with <code>au plugin</code>.</p>
+</li>
+<li>
+<p><strong><code>meta</code></strong>
+   Every plugin must have meta information:</p>
+</li>
+<li>
+<p><code>name</code> — Display name of the plugin</p>
+</li>
+<li><code>version</code> — Plugin version</li>
+<li><code>api</code> — The Aureli API it targets</li>
+<li><code>description</code> — What the plugin does</li>
+<li>
+<p><code>author</code> — Who made the plugin</p>
+</li>
+<li>
+<p><strong><code>@import</code></strong>
+   Allows importing other Kavo files or plugin modules.</p>
+</li>
+<li>
+<p><strong><code>widget</code></strong>
+   Declares a widget provided by the plugin. Widgets have:</p>
+</li>
+<li>
+<p><code>meta</code> — Name and internal ID</p>
+</li>
+<li><code>onRender()</code> — What the widget displays</li>
+<li><code>onPlacement(data)</code> — Rules for placing the widget</li>
+</ol>
+<hr />
+<h2 id="creating-a-new-plugin">Creating a New Plugin<a class="headerlink" href="#creating-a-new-plugin" title="Permanent link">&para;</a></h2>
+<p>To create a new plugin, you can use the CLI:</p>
+<pre class="codehilite"><code class="language-bash">$ au plugin new
+</code></pre>
+
+<p>It will prompt you for:</p>
+<ul>
+<li>Plugin Name</li>
+<li>Plugin Id (internal ID)</li>
+<li>Author</li>
+<li>Version</li>
+<li>API</li>
+<li>Description</li>
+<li>Directory to create the plugin (<code>.</code> for the current folder or a new name)</li>
+</ul>
+<p>It will scaffold a folder with a <code>plugin.kvo</code> file ready to edit.</p>
+<hr />
+<h2 id="loading-a-plugin-from-a-directory">Loading a Plugin from a Directory<a class="headerlink" href="#loading-a-plugin-from-a-directory" title="Permanent link">&para;</a></h2>
+<p>If you already have a plugin folder locally and want to load it into Aureli:</p>
+<pre class="codehilite"><code class="language-bash">$ au plugin load ./MyPlugin
+</code></pre>
+
+<p>This copies the folder into Aureli’s <code>plugins</code> directory.</p>
+<hr />
+<h2 id="installing-a-plugin-from-git">Installing a Plugin from Git<a class="headerlink" href="#installing-a-plugin-from-git" title="Permanent link">&para;</a></h2>
+<p>You can also install a plugin directly from a repository:</p>
+<pre class="codehilite"><code class="language-bash">$ au plugin install https://github.com/username/myplugin.git
+</code></pre>
+
+<p>The CLI will:</p>
+<ol>
+<li>Clone the plugin into a temporary folder</li>
+<li>Read the <code>plugin.kvo</code> meta</li>
+<li>Check if a plugin with the same ID is already installed</li>
+<li>Install it into Aureli’s plugin folder if everything is fine</li>
+</ol>
+<hr />
+<h2 id="uninstalling-a-plugin">Uninstalling a Plugin<a class="headerlink" href="#uninstalling-a-plugin" title="Permanent link">&para;</a></h2>
+<p>Remove a plugin by its ID:</p>
+<pre class="codehilite"><code class="language-bash">$ au plugin uninstall my-plugin
+</code></pre>
+
+<p>This deletes the plugin folder from Aureli.</p>
+<hr />
+<h2 id="updating-a-plugin">Updating a Plugin<a class="headerlink" href="#updating-a-plugin" title="Permanent link">&para;</a></h2>
+<p>Update a plugin (if it’s a git repository) using:</p>
+<pre class="codehilite"><code class="language-bash">$ au plugin update my-plugin
+</code></pre>
+
+<p>The CLI performs a <code>git pull --ff-only</code> in the plugin’s folder.</p>
+<hr />
+<h2 id="listing-installed-plugins">Listing Installed Plugins<a class="headerlink" href="#listing-installed-plugins" title="Permanent link">&para;</a></h2>
+<p>To see all installed plugins:</p>
+<pre class="codehilite"><code class="language-bash">$ au plugin list
+</code></pre>
+
+<p>Example output:</p>
+<pre class="codehilite"><code> · Base Aureli System — Eq Desktop
+ ├ Id: aureli-base
+ └ Enabled: enabled
+</code></pre>
+
+<hr />
+<h2 id="viewing-plugin-meta">Viewing Plugin Meta<a class="headerlink" href="#viewing-plugin-meta" title="Permanent link">&para;</a></h2>
+<p>To view plugin metadata without installing:</p>
+<pre class="codehilite"><code class="language-bash">$ au plugin meta https://github.com/username/myplugin.git
+</code></pre>
+
+<p>Example output:</p>
+<pre class="codehilite"><code>Information for 'MyPlugin' Plugin:
+Name: MyPlugin
+Version: 0.1.0
+API: Elephant-1
+Description: A simple plugin example
+Author: You
+</code></pre>
+
+<hr />
+<h2 id="tips-tricks">Tips &amp; Tricks<a class="headerlink" href="#tips-tricks" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">Plugin IDs must be unique</p>
+</div>
+<p>Aureli identifies plugins by their internal ID. Two plugins with the same ID cannot be installed simultaneously.</p>
+<div class="admonition info">
+<p class="admonition-title">Scaffolding saves time</p>
+</div>
+<p>Using <code>au plugin new</code> ensures your plugin has the proper structure and meta information.</p>
+<div class="admonition info">
+<p class="admonition-title">Editable Widgets</p>
+</div>
+<p>Widgets can use <code>root.options</code> to access configurable properties, allowing your plugin to be flexible.</p>
+<p>This guide covers everything to <strong>get started building and managing Aureli plugins</strong>. Once you’ve mastered this, you can explore creating more complex widgets, services, and integrations with Aureli’s ecosystem.</p>
   </div>
   
   <script>
@@ -1610,19 +1750,19 @@
 </article>
                                 <div class="mx-auto flex flex-wrap h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">
     
-    
     <a data-slot="button"
-        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 ml-auto shadow-none"
-        href="/faq/">
-        <span class="max-[500px]:hidden">FAQ</span>
+        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none"
+        href="/plugins/">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-            class="tabler-icon tabler-icon-arrow-right ">
+            class="tabler-icon tabler-icon-arrow-left ">
             <path d="M5 12l14 0"></path>
-            <path d="M13 18l6 -6"></path>
-            <path d="M13 6l6 6"></path>
+            <path d="M5 12l6 6"></path>
+            <path d="M5 12l6 -6"></path>
         </svg>
+        <span class="max-[500px]:hidden">Index</span>
     </a>
+    
     
 </div>
                                 <dialog id="bottom-sidebar" onclick="onBottomSidebarDialogClick(event)" class="bg-transparent"
@@ -1641,43 +1781,43 @@
                 <div class="text-muted-foreground text-sm font-medium">Menu</div>
                 <div class="flex flex-col gap-3">
                     
-                    <a class="text-2xl font-medium" href=".">
+                    <a class="text-2xl font-medium" href="../..">
                         
                         Home
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="faq/">
+                    <a class="text-2xl font-medium" href="../../faq/">
                         
                         FAQ
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="getstarted/">
+                    <a class="text-2xl font-medium" href="../../getstarted/">
                         
                         Get started
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="install/">
+                    <a class="text-2xl font-medium" href="../../install/">
                         
                         Install
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="roadmap/">
+                    <a class="text-2xl font-medium" href="../../roadmap/">
                         
                         Roadmap
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="showcase/">
+                    <a class="text-2xl font-medium" href="../../showcase/">
                         
                         Showcase
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="versions/">
+                    <a class="text-2xl font-medium" href="../../versions/">
                         
                         Versions
                         
@@ -1695,37 +1835,37 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="configuration/">
+                        <a class="text-2xl font-medium" href="../../configuration/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/cli/">
+                        <a class="text-2xl font-medium" href="../../configuration/cli/">
                             
                             Cli
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/config/">
+                        <a class="text-2xl font-medium" href="../../configuration/config/">
                             
                             Config
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/ipc/">
+                        <a class="text-2xl font-medium" href="../../configuration/ipc/">
                             
                             IPC
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/keybinds/">
+                        <a class="text-2xl font-medium" href="../../configuration/keybinds/">
                             
                             Keybinds
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/msg/">
+                        <a class="text-2xl font-medium" href="../../configuration/msg/">
                             
                             Msg
                             
@@ -1740,13 +1880,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="credits/">
+                        <a class="text-2xl font-medium" href="../../credits/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="credits/credits/">
+                        <a class="text-2xl font-medium" href="../../credits/credits/">
                             
                             Credits
                             
@@ -1761,13 +1901,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="customization/">
+                        <a class="text-2xl font-medium" href="../../customization/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="customization/customizing/">
+                        <a class="text-2xl font-medium" href="../../customization/customizing/">
                             
                             Customizing
                             
@@ -1782,37 +1922,37 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="development/">
+                        <a class="text-2xl font-medium" href="../../development/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/advancednotch/">
+                        <a class="text-2xl font-medium" href="../../development/advancednotch/">
                             
                             Advanced Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/firstnotch/">
+                        <a class="text-2xl font-medium" href="../../development/firstnotch/">
                             
                             First Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/modal/">
+                        <a class="text-2xl font-medium" href="../../development/modal/">
                             
                             Modals
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/notch/">
+                        <a class="text-2xl font-medium" href="../../development/notch/">
                             
                             Notch
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/popup/">
+                        <a class="text-2xl font-medium" href="../../development/popup/">
                             
                             Popups
                             
@@ -1827,13 +1967,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="plugins/">
+                        <a class="text-2xl font-medium" href="../">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="plugins/plugin/">
+                        <a class="text-2xl font-medium" href="./">
                             
                             First Plugin
                             
@@ -1857,6 +1997,92 @@
                                 <div id="toc" view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
+        
+        
+        
+        
+        <a href="#plugin-structure"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#plugin-structure');">
+            Plugin Structure
+        </a>
+        
+        
+        <a href="#breaking-it-down"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#breaking-it-down');">
+            Breaking It Down
+        </a>
+        
+        
+
+        
+        <a href="#creating-a-new-plugin"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#creating-a-new-plugin');">
+            Creating a New Plugin
+        </a>
+        
+
+        
+        <a href="#loading-a-plugin-from-a-directory"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#loading-a-plugin-from-a-directory');">
+            Loading a Plugin from a Directory
+        </a>
+        
+
+        
+        <a href="#installing-a-plugin-from-git"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#installing-a-plugin-from-git');">
+            Installing a Plugin from Git
+        </a>
+        
+
+        
+        <a href="#uninstalling-a-plugin"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#uninstalling-a-plugin');">
+            Uninstalling a Plugin
+        </a>
+        
+
+        
+        <a href="#updating-a-plugin"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#updating-a-plugin');">
+            Updating a Plugin
+        </a>
+        
+
+        
+        <a href="#listing-installed-plugins"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#listing-installed-plugins');">
+            Listing Installed Plugins
+        </a>
+        
+
+        
+        <a href="#viewing-plugin-meta"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#viewing-plugin-meta');">
+            Viewing Plugin Meta
+        </a>
+        
+
+        
+        <a href="#tips-tricks"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#tips-tricks');">
+            Tips &amp; Tricks
+        </a>
+        
+
+        
+        
+        
         
 
     </div>
@@ -1886,12 +2112,12 @@
     </div>
      
 
-<script src="search/main.js"></script>
+<script src="../../search/main.js"></script>
 
 
     
 
-    <script src="js/copy-button.js"></script>
+    <script src="../../js/copy-button.js"></script>
     <script>updatePygmentsStylesheet();</script>
     
     <script>fetchStargazers("https://github.com/eq-desktop/eqsh");</script>

@@ -36,19 +36,19 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to the eqSh Wiki - Eqsh Wiki</title>
+    <title>Customizing - Eqsh Wiki</title>
     
 
 
-<title>Welcome to the eqSh Wiki</title>
+<title>Customizing</title>
 
 
 
-<meta name="description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
+<meta name="description" content="Simple guide for customizing eqSh's appearance and behavior">
 
 
 
-<meta name="keywords" content="docs, eqsh, desktop, linux, equora, quickshell, hyprland">
+<meta name="keywords" content="docs, desktop, equora, quickshell, hyprland, eqsh, setup, linux, guide, customizing">
 
 
 
@@ -56,98 +56,66 @@
 
 
 
-<link rel="canonical" href="https://eqsh-wiki.github.io/">
+<link rel="canonical" href="https://eqsh-wiki.github.io/customization/customizing/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Welcome to the eqSh Wiki">
+<meta property="og:title" content="Customizing">
 
 
 
-<meta property="og:description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
+<meta property="og:description" content="Simple guide for customizing eqSh's appearance and behavior">
 
 
 
-<meta property="og:url" content="https://eqsh-wiki.github.io/">
+<meta property="og:url" content="https://eqsh-wiki.github.io/customization/customizing/">
 
 
 
-<meta property="og:image" content="./assets/eqsh.svg">
+<meta property="og:image" content="../assets/eqsh.svg">
 
 
 
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Welcome to the eqSh Wiki">
+<meta name="twitter:title" content="Customizing">
 
 
 
-<meta name="twitter:description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
+<meta name="twitter:description" content="Simple guide for customizing eqSh's appearance and behavior">
 
 
 
-<meta name="twitter:image" content="./assets/eqsh.svg">
+<meta name="twitter:image" content="../assets/eqsh.svg">
 
 
 <!-- JSON-LD Structured Data -->
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Welcome to the eqSh Wiki",
-    "url": "https://eqsh-wiki.github.io/",
-    "description": "Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.",
-    
-    "author": {
-      "@type": "Person",
-      "name": "enviction"
-    },
-    
-    
-    
-    
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://eqsh-wiki.github.io/"
-    },
-    
-    
-    "image": {
-      "@type": "ImageObject",
-      "url": "./assets/eqsh.svg",
-      "width": 1200,
-      "height": 630
-    }
-    
-  }
-  </script>
 
 
+    <link rel="icon" href="../../img/favicon.ico">
 
-    <link rel="icon" href="img/favicon.ico">
-
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/geist.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/geist.css" rel="stylesheet">
 
     
     
 
 <link id="pygments-light" rel="stylesheet"
-    href="css/pygments/shadcn-light.css">
+    href="../../css/pygments/shadcn-light.css">
 <link id="pygments-dark" rel="stylesheet"
-    href="css/pygments/github-dark.css"
+    href="../../css/pygments/github-dark.css"
     media="(prefers-color-scheme: dark)">
 
 
     
-    <link href="css/images.css" rel="stylesheet">
+    <link href="../../css/images.css" rel="stylesheet">
 
     
 
-    <script src="js/callbacks.js"></script>
+    <script src="../../js/callbacks.js"></script>
 
     
 
@@ -189,7 +157,7 @@
                 <span class="size-8 flex flex-row justify-center items-center">
                     
 
-<img class="size-5" src="assets/eqsh.svg" alt="icon">
+<img class="size-5" src="../../assets/eqsh.svg" alt="icon">
 
 
                 </span>
@@ -203,7 +171,7 @@
   
   
     <a class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all hover:bg-accent hover:text-accent-foreground h-8 rounded-md gap-1.5 px-3"
-      href="about/">
+      href="../../about/">
       About
     </a>
   
@@ -982,7 +950,7 @@
 
 <div 
     x-data="{ open: true }"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md "
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md bg-popover"
     data-required-link=""
 >
     
@@ -1554,13 +1522,13 @@
     <div class="flex flex-col gap-2">
       <div id="page-header" class="flex items-start justify-between">
         <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-          Welcome to the eqSh Wiki
+          Customizing
         </h1>
 
         <div class="flex items-center gap-2 pt-1.5">
           
 <button
-    onclick="fetch(`https://eqsh-wiki.github.io/index.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))"
+    onclick="fetch(`https://eqsh-wiki.github.io/customization/customizing.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))"
     data-slot="button" class="secondary cursor-pointer">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-copy ">
@@ -1572,10 +1540,23 @@
     <span class="max-md:hidden">Copy Page</span>
 </button>
           
+          <a data-slot="button" id="previous-button"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
+            href="/customization/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="tabler-icon tabler-icon-arrow-left">
+              <path d="M5 12l14 0"></path>
+              <path d="M5 12l6 6"></path>
+              <path d="M5 12l6 -6"></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </a>
+          
           
           <a data-slot="button" id="next-button"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-            href="/faq/">
+            href="/development/">
             <span class="sr-only">Next</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1589,6 +1570,10 @@
         </div>
       </div>
       
+      <p id="summary" class="text-muted-foreground text-[1.05rem] text-balance sm:text-base">
+        A simple guide for customizing eqSh
+      </p>
+      
     </div>
     <div class="flex justify-end items-center">
         <div class="grow text-muted-foreground pt-4 flex flex-row justify-end items-center">
@@ -1599,7 +1584,7 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    <p>This wiki is a collection of documentation for <a href="https://github.com/eq-desktop/eqsh">eqSh</a>, a Quickshell-based shell for <a href="https://hypr.land">Hyprland</a>.</p>
+    
   </div>
   
   <script>
@@ -1610,11 +1595,24 @@
 </article>
                                 <div class="mx-auto flex flex-wrap h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">
     
+    <a data-slot="button"
+        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none"
+        href="/customization/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tabler-icon tabler-icon-arrow-left ">
+            <path d="M5 12l14 0"></path>
+            <path d="M5 12l6 6"></path>
+            <path d="M5 12l6 -6"></path>
+        </svg>
+        <span class="max-[500px]:hidden">Index</span>
+    </a>
+    
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 ml-auto shadow-none"
-        href="/faq/">
-        <span class="max-[500px]:hidden">FAQ</span>
+        href="/development/">
+        <span class="max-[500px]:hidden">Index</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="tabler-icon tabler-icon-arrow-right ">
@@ -1641,43 +1639,43 @@
                 <div class="text-muted-foreground text-sm font-medium">Menu</div>
                 <div class="flex flex-col gap-3">
                     
-                    <a class="text-2xl font-medium" href=".">
+                    <a class="text-2xl font-medium" href="../..">
                         
                         Home
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="faq/">
+                    <a class="text-2xl font-medium" href="../../faq/">
                         
                         FAQ
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="getstarted/">
+                    <a class="text-2xl font-medium" href="../../getstarted/">
                         
                         Get started
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="install/">
+                    <a class="text-2xl font-medium" href="../../install/">
                         
                         Install
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="roadmap/">
+                    <a class="text-2xl font-medium" href="../../roadmap/">
                         
                         Roadmap
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="showcase/">
+                    <a class="text-2xl font-medium" href="../../showcase/">
                         
                         Showcase
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="versions/">
+                    <a class="text-2xl font-medium" href="../../versions/">
                         
                         Versions
                         
@@ -1695,37 +1693,37 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="configuration/">
+                        <a class="text-2xl font-medium" href="../../configuration/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/cli/">
+                        <a class="text-2xl font-medium" href="../../configuration/cli/">
                             
                             Cli
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/config/">
+                        <a class="text-2xl font-medium" href="../../configuration/config/">
                             
                             Config
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/ipc/">
+                        <a class="text-2xl font-medium" href="../../configuration/ipc/">
                             
                             IPC
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/keybinds/">
+                        <a class="text-2xl font-medium" href="../../configuration/keybinds/">
                             
                             Keybinds
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/msg/">
+                        <a class="text-2xl font-medium" href="../../configuration/msg/">
                             
                             Msg
                             
@@ -1740,13 +1738,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="credits/">
+                        <a class="text-2xl font-medium" href="../../credits/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="credits/credits/">
+                        <a class="text-2xl font-medium" href="../../credits/credits/">
                             
                             Credits
                             
@@ -1761,13 +1759,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="customization/">
+                        <a class="text-2xl font-medium" href="../">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="customization/customizing/">
+                        <a class="text-2xl font-medium" href="./">
                             
                             Customizing
                             
@@ -1782,37 +1780,37 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="development/">
+                        <a class="text-2xl font-medium" href="../../development/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/advancednotch/">
+                        <a class="text-2xl font-medium" href="../../development/advancednotch/">
                             
                             Advanced Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/firstnotch/">
+                        <a class="text-2xl font-medium" href="../../development/firstnotch/">
                             
                             First Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/modal/">
+                        <a class="text-2xl font-medium" href="../../development/modal/">
                             
                             Modals
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/notch/">
+                        <a class="text-2xl font-medium" href="../../development/notch/">
                             
                             Notch
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/popup/">
+                        <a class="text-2xl font-medium" href="../../development/popup/">
                             
                             Popups
                             
@@ -1827,13 +1825,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="plugins/">
+                        <a class="text-2xl font-medium" href="../../plugins/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="plugins/plugin/">
+                        <a class="text-2xl font-medium" href="../../plugins/plugin/">
                             
                             First Plugin
                             
@@ -1886,12 +1884,12 @@
     </div>
      
 
-<script src="search/main.js"></script>
+<script src="../../search/main.js"></script>
 
 
     
 
-    <script src="js/copy-button.js"></script>
+    <script src="../../js/copy-button.js"></script>
     <script>updatePygmentsStylesheet();</script>
     
     <script>fetchStargazers("https://github.com/eq-desktop/eqsh");</script>

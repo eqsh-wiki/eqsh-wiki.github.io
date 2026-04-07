@@ -36,118 +36,97 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to the eqSh Wiki - Eqsh Wiki</title>
+    <title>Your First Notch Application - Eqsh Wiki</title>
     
 
 
-<title>Welcome to the eqSh Wiki</title>
+<title>Your First Notch Application</title>
 
 
 
-<meta name="description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
 
 
 
-<meta name="keywords" content="docs, eqsh, desktop, linux, equora, quickshell, hyprland">
+
+<meta name="author" content="Eq Desktop">
 
 
 
-<meta name="author" content="enviction">
-
-
-
-<link rel="canonical" href="https://eqsh-wiki.github.io/">
+<link rel="canonical" href="https://eqsh-wiki.github.io/development/firstnotch/">
 
 
 <!-- Open Graph (Facebook, LinkedIn) -->
 
-<meta property="og:title" content="Welcome to the eqSh Wiki">
+<meta property="og:title" content="Your First Notch Application">
 
 
 
-<meta property="og:description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
 
 
-
-<meta property="og:url" content="https://eqsh-wiki.github.io/">
-
+<meta property="og:url" content="https://eqsh-wiki.github.io/development/firstnotch/">
 
 
-<meta property="og:image" content="./assets/eqsh.svg">
 
 
 
 
 <!-- Twitter Card -->
 
-<meta name="twitter:title" content="Welcome to the eqSh Wiki">
+<meta name="twitter:title" content="Your First Notch Application">
 
 
 
-<meta name="twitter:description" content="Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.">
 
-
-
-<meta name="twitter:image" content="./assets/eqsh.svg">
 
 
 <!-- JSON-LD Structured Data -->
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Welcome to the eqSh Wiki",
-    "url": "https://eqsh-wiki.github.io/",
-    "description": "Welcome to the eqSh Developer Wiki, your hub for configuring, developing, and mastering the eqDesktop.",
-    
-    "author": {
-      "@type": "Person",
-      "name": "enviction"
-    },
-    
-    
-    
-    
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://eqsh-wiki.github.io/"
-    },
-    
-    
-    "image": {
-      "@type": "ImageObject",
-      "url": "./assets/eqsh.svg",
-      "width": 1200,
-      "height": 630
-    }
-    
-  }
-  </script>
 
 
+    <link rel="icon" href="../../img/favicon.ico">
 
-    <link rel="icon" href="img/favicon.ico">
-
-    <link href="css/base.css" rel="stylesheet">
-    <link href="css/geist.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/geist.css" rel="stylesheet">
 
     
     
 
 <link id="pygments-light" rel="stylesheet"
-    href="css/pygments/shadcn-light.css">
+    href="../../css/pygments/shadcn-light.css">
 <link id="pygments-dark" rel="stylesheet"
-    href="css/pygments/github-dark.css"
+    href="../../css/pygments/github-dark.css"
     media="(prefers-color-scheme: dark)">
 
 
     
-    <link href="css/images.css" rel="stylesheet">
+    <link href="../../css/images.css" rel="stylesheet">
 
     
+    <link href="../../ " rel="stylesheet">
+    <link href="../../-" rel="stylesheet">
+    <link href="../../ " rel="stylesheet">
+    <link href="../../"" rel="stylesheet">
+    <link href="../.." rel="stylesheet">
+    <link href="../.." rel="stylesheet">
+    <link href="/" rel="stylesheet">
+    <link href="../../c" rel="stylesheet">
+    <link href="../../s" rel="stylesheet">
+    <link href="../../s" rel="stylesheet">
+    <link href="/" rel="stylesheet">
+    <link href="../../i" rel="stylesheet">
+    <link href="../../m" rel="stylesheet">
+    <link href="../../a" rel="stylesheet">
+    <link href="../../g" rel="stylesheet">
+    <link href="../../e" rel="stylesheet">
+    <link href="../../s" rel="stylesheet">
+    <link href="../.." rel="stylesheet">
+    <link href="../../c" rel="stylesheet">
+    <link href="../../s" rel="stylesheet">
+    <link href="../../s" rel="stylesheet">
+    <link href="../../"" rel="stylesheet">
+    
 
-    <script src="js/callbacks.js"></script>
+    <script src="../../js/callbacks.js"></script>
 
     
 
@@ -189,7 +168,7 @@
                 <span class="size-8 flex flex-row justify-center items-center">
                     
 
-<img class="size-5" src="assets/eqsh.svg" alt="icon">
+<img class="size-5" src="../../assets/eqsh.svg" alt="icon">
 
 
                 </span>
@@ -203,7 +182,7 @@
   
   
     <a class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all hover:bg-accent hover:text-accent-foreground h-8 rounded-md gap-1.5 px-3"
-      href="about/">
+      href="../../about/">
       About
     </a>
   
@@ -1083,7 +1062,7 @@
 
 <div 
     x-data="{ open: true }"
-    class="relative flex w-full min-w-0 flex-col p-2 rounded-md "
+    class="relative flex w-full min-w-0 flex-col p-2 rounded-md bg-popover"
     data-required-link=""
 >
     
@@ -1554,13 +1533,13 @@
     <div class="flex flex-col gap-2">
       <div id="page-header" class="flex items-start justify-between">
         <h1 class="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-3xl xl:text-4xl">
-          Welcome to the eqSh Wiki
+          Your First Notch Application
         </h1>
 
         <div class="flex items-center gap-2 pt-1.5">
           
 <button
-    onclick="fetch(`https://eqsh-wiki.github.io/index.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))"
+    onclick="fetch(`https://eqsh-wiki.github.io/development/firstnotch.md`).then((r) => r.blob()).then((blob) => navigator.clipboard.write([new ClipboardItem({ 'text/plain': blob })]))"
     data-slot="button" class="secondary cursor-pointer">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
         stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="tabler-icon tabler-icon-copy ">
@@ -1572,10 +1551,23 @@
     <span class="max-md:hidden">Copy Page</span>
 </button>
           
+          <a data-slot="button" id="previous-button"
+            class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
+            href="/development/advancednotch/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              class="tabler-icon tabler-icon-arrow-left">
+              <path d="M5 12l14 0"></path>
+              <path d="M5 12l6 6"></path>
+              <path d="M5 12l6 -6"></path>
+            </svg>
+            <span class="sr-only">Previous</span>
+          </a>
+          
           
           <a data-slot="button" id="next-button"
             class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 extend-touch-target size-8 shadow-none md:size-7"
-            href="/faq/">
+            href="/development/modal/">
             <span class="sr-only">Next</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -1599,7 +1591,221 @@
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    <p>This wiki is a collection of documentation for <a href="https://github.com/eq-desktop/eqsh">eqSh</a>, a Quickshell-based shell for <a href="https://hypr.land">Hyprland</a>.</p>
+    <p>So you want to make a notch app? Here's how to get started.</p>
+<p>So first we have to know a bit about the Notch API and what an app looks like.</p>
+<h2 id="notch-design">Notch Design<a class="headerlink" href="#notch-design" title="Permanent link">&para;</a></h2>
+<p>This is what the Notch looks like without an app.</p>
+<p><img alt="Clear Notch without app" src="../../assets/development/notch/clear.png" /></p>
+<p>But if you were to have an app running it would be seperated into 3 different looks<br />
+The first one is the <strong>Notch Indicative Mode</strong><br />
+In this mode the app tries to be small and simple to make sure that the user won't be distracted.  </p>
+<p><img alt="Notch Indicative Mode" src="../../assets/development/notch/indi.png" /></p>
+<p>Now when hovering normally nothing happens, but in the backend it switches to a new mode.<br />
+This mode is called <strong>Notch Informative Mode</strong>  </p>
+<p>Here it normally just get a bit bigger, but by changing properties like <code>meta.informativeHeight</code> you can make it bigger or smaller.  </p>
+<p>For example, in this case we make it bigger by setting <code>meta.informativeHeight: meta.indicativeHeight + 20</code>.</p>
+<p><img alt="Notch Informative Mode" src="../../assets/development/notch/info.png" /></p>
+<p>And finally the <strong>Notch Active Mode</strong></p>
+<p><img alt="Notch Active Mode" src="../../assets/development/notch/active.png" /></p>
+<p>This mode is activated when clicked on, and it's where you can finally let your creative juices flow.</p>
+<div class="admonition warning">
+<p class="admonition-title">Blurry?</p>
+<p>Sadly that is the best we can do with the internals of Quickshell, but we're working on a fix.</p>
+</div>
+<h2 id="your-first-notch-app">Your First Notch App<a class="headerlink" href="#your-first-notch-app" title="Permanent link">&para;</a></h2>
+<p>The first thing you need to do is to create a new Notch Application.</p>
+<p>To create a new Notch Application you first have to create a new QML file.</p>
+<pre class="codehilite"><code class="language-bash">$ mkdir MyNotchApp
+$ cd MyNotchApp
+$ touch Main.qml
+</code></pre>
+
+<p>And then inside the file create the Notch Application.
+A Notch Application consists of these parts:</p>
+<h3 id="the-imports">The <a href="https://doc.qt.io/qt-6/qtqml-syntax-imports.html">imports</a><a class="headerlink" href="#the-imports" title="Permanent link">&para;</a></h3>
+<p>The Imports are at the top of your file and define the modules you want to use.</p>
+<pre class="codehilite"><code class="language-qml">import QtQuick
+import Quickshell
+import qs
+import qs.ui.controls.auxiliary.notch // required for NotchApplication
+import qs.ui.controls.primitives // required for CFText, CFI, CFVI, ...
+</code></pre>
+
+<h3 id="the-notchapplication">The NotchApplication<a class="headerlink" href="#the-notchapplication" title="Permanent link">&para;</a></h3>
+<p>The NotchApplication is the main part of your Notch App.</p>
+<pre class="codehilite"><code class="language-qml">NotchApplication {
+    id: root // The id of your Notch App, this should always be `root`
+    details.version: &quot;Elephant-1&quot; // This is the API version
+    details.appType: &quot;indicator&quot; // This is the app type, it can either be indicator or media
+    // The height and width of your App while in Active Mode
+    meta.height: 60
+    meta.width: 300
+    // notch.defaultHeight is a special property that defines the default height of your Notch App
+    meta.indicativeHeight: notch.defaultHeight // The height of your App while in Indicative Mode
+    meta.informativeHeight: meta.indicativeHeight+20 // The height of your App while in Informative Mode
+
+    onlyActive: false // Set this to true if you want to make your app active by default and only active
+    isActive: false // Set this to true if you want to make your app active by default
+    noMode: false // Prevents the app from switching modes
+    // This is rather for eqSh itself and not recommended
+    immortal: false // Will keep the app running even if it's not focused and prevents it from being killed by the system
+
+    indicative: // see the next section
+    active: // see the next section
+}
+</code></pre>
+
+<p>You most likely won't need to have that many properties, this is a minimal example:</p>
+<pre class="codehilite"><code class="language-qml">NotchApplication {
+    id: root
+    details.version: &quot;Elephant-1&quot;
+    details.appType: &quot;indicator&quot;
+    meta.height: 60
+    meta.width: 300
+
+    indicative: // see the next section
+    active: // see the next section
+}
+</code></pre>
+
+<h3 id="the-indicative-mode">The Indicative Mode<a class="headerlink" href="#the-indicative-mode" title="Permanent link">&para;</a></h3>
+<pre class="codehilite"><code class="language-qml">indicative: Item {
+    CFText { // This is provided by eqsh and is an improved version of Text
+        anchors.top: parent.top
+        anchors.topMargin: 6
+        anchors.left: parent.left
+        anchors.leftMargin: 10
+        text: &quot;Indicative Mode&quot;
+    }
+}
+</code></pre>
+
+<h3 id="the-active-mode">The Active Mode<a class="headerlink" href="#the-active-mode" title="Permanent link">&para;</a></h3>
+<pre class="codehilite"><code class="language-qml">active: Item {
+    CFText {
+        id: text
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: parent.left
+        anchors.leftMargin: 10
+        text: &quot;Active Mode&quot;
+    }
+    NotchButton { // This is provided by eqsh
+        id: close
+        width: 120
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: text.right
+        anchors.leftMargin: 10
+        text: &quot;Click to Close&quot;
+        color: &quot;#ffffff&quot;
+        onClicked: root.closeMe()
+    }
+    NotchButton {
+        id: test
+        iconSource: &quot;file:///home/enviction/Downloads/lock.svg&quot;
+        iconSize: 20
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: close.right
+        anchors.leftMargin: 10
+        color: &quot;#ffffff&quot;
+        backgroundColor: &quot;#502369ff&quot;
+        iconColor: &quot;#2369ff&quot;
+    }
+}
+</code></pre>
+
+<p>This is what it would look like when you run it.</p>
+<p><img alt="Your First Notch App" src="../../assets/development/notch/firstnotch.png" /></p>
+<p>But wait, how do you run it?</p>
+<pre class="codehilite"><code class="language-bash">$ cd MyNotchApp
+$ au new_notch_app ./Main.qml &quot;MyNotchApp&quot;
+</code></pre>
+
+<p>Want to end the currently focused app?</p>
+<pre class="codehilite"><code class="language-bash">$ au destroy_notch_app
+</code></pre>
+
+<p>Heres the entire file:</p>
+<details>
+<summary>Main.qml</summary>
+<pre class="codehilite"><code class="language-qml">import QtQuick
+import Quickshell
+import qs
+import qs.ui.controls.auxiliary.notch
+import qs.ui.controls.primitives
+
+NotchApplication {
+    id: root
+    details.version: &quot;Elephant-1&quot;
+    details.appType: &quot;indicator&quot;
+    meta.height: 60
+    meta.width: 300
+
+    indicative: Item {
+        CFText {
+            anchors.top: parent.top
+            anchors.topMargin: 6
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+            text: &quot;Indicative Mode&quot;
+        }
+    }
+    active: Item {
+        CFText {
+            id: text
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: parent.left
+            anchors.leftMargin: 10
+            text: &quot;Active Mode&quot;
+        }
+        NotchButton {
+            id: close
+            width: 120
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: text.right
+            anchors.leftMargin: 10
+            text: &quot;Click to Close&quot;
+            color: &quot;#ffffff&quot;
+            onClicked: root.closeMe()
+        }
+        NotchButton {
+            id: test
+            iconSource: &quot;file:///home/enviction/Downloads/lock.svg&quot;
+            iconSize: 20
+            anchors.verticalCenter: parent.verticalCenter
+            anchors.left: close.right
+            anchors.leftMargin: 10
+            color: &quot;#ffffff&quot;
+            backgroundColor: &quot;#502369ff&quot;
+            iconColor: &quot;#2369ff&quot;
+        }
+    }
+}
+</code></pre>
+
+</details>
+<h3 id="tips-tricks">Tips &amp; Tricks<a class="headerlink" href="#tips-tricks" title="Permanent link">&para;</a></h3>
+<p>The NotchApplication has a few properties that you can use to make your Notch App next-level.</p>
+<div class="admonition info">
+<p class="admonition-title">Do you want to know if the App is focused?</p>
+<p>use <code>root.isFocused</code></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Make the app close after 5 seconds?</p>
+<p>set the <code>meta.closeAfterMs</code> property to 5000<br />
+<code>-1 makes it never exit</code></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Want it to not be closed when another app is focused?</p>
+<p>Use <code>appType: "media"</code></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Got a close button?</p>
+<p>Then you're going to need this: <code>root.closeMe()</code></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">The right side of my notch is too long if I only have text on the left side</p>
+<p>There's a special property for that: <code>meta.xOffset: -50</code> which moves the notch 50px to the left</p>
+</div>
   </div>
   
   <script>
@@ -1610,11 +1816,24 @@
 </article>
                                 <div class="mx-auto flex flex-wrap h-16 w-full max-w-2xl items-center gap-2 px-4 md:px-0">
     
+    <a data-slot="button"
+        class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 shadow-none"
+        href="/development/advancednotch/">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="tabler-icon tabler-icon-arrow-left ">
+            <path d="M5 12l14 0"></path>
+            <path d="M5 12l6 6"></path>
+            <path d="M5 12l6 -6"></path>
+        </svg>
+        <span class="max-[500px]:hidden">Advancednotch</span>
+    </a>
+    
     
     <a data-slot="button"
         class="inline-flex items-center justify-center whitespace-nowrap text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg:not([class*='size-'])]:size-4 shrink-0 [&amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive bg-secondary text-secondary-foreground hover:bg-secondary/80 h-8 rounded-md gap-1.5 px-3 has-[&gt;svg]:px-2.5 ml-auto shadow-none"
-        href="/faq/">
-        <span class="max-[500px]:hidden">FAQ</span>
+        href="/development/modal/">
+        <span class="max-[500px]:hidden">Modals and Dialogs</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
             class="tabler-icon tabler-icon-arrow-right ">
@@ -1641,43 +1860,43 @@
                 <div class="text-muted-foreground text-sm font-medium">Menu</div>
                 <div class="flex flex-col gap-3">
                     
-                    <a class="text-2xl font-medium" href=".">
+                    <a class="text-2xl font-medium" href="../..">
                         
                         Home
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="faq/">
+                    <a class="text-2xl font-medium" href="../../faq/">
                         
                         FAQ
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="getstarted/">
+                    <a class="text-2xl font-medium" href="../../getstarted/">
                         
                         Get started
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="install/">
+                    <a class="text-2xl font-medium" href="../../install/">
                         
                         Install
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="roadmap/">
+                    <a class="text-2xl font-medium" href="../../roadmap/">
                         
                         Roadmap
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="showcase/">
+                    <a class="text-2xl font-medium" href="../../showcase/">
                         
                         Showcase
                         
                     </a>
                     
-                    <a class="text-2xl font-medium" href="versions/">
+                    <a class="text-2xl font-medium" href="../../versions/">
                         
                         Versions
                         
@@ -1695,37 +1914,37 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="configuration/">
+                        <a class="text-2xl font-medium" href="../../configuration/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/cli/">
+                        <a class="text-2xl font-medium" href="../../configuration/cli/">
                             
                             Cli
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/config/">
+                        <a class="text-2xl font-medium" href="../../configuration/config/">
                             
                             Config
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/ipc/">
+                        <a class="text-2xl font-medium" href="../../configuration/ipc/">
                             
                             IPC
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/keybinds/">
+                        <a class="text-2xl font-medium" href="../../configuration/keybinds/">
                             
                             Keybinds
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="configuration/msg/">
+                        <a class="text-2xl font-medium" href="../../configuration/msg/">
                             
                             Msg
                             
@@ -1740,13 +1959,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="credits/">
+                        <a class="text-2xl font-medium" href="../../credits/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="credits/credits/">
+                        <a class="text-2xl font-medium" href="../../credits/credits/">
                             
                             Credits
                             
@@ -1761,13 +1980,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="customization/">
+                        <a class="text-2xl font-medium" href="../../customization/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="customization/customizing/">
+                        <a class="text-2xl font-medium" href="../../customization/customizing/">
                             
                             Customizing
                             
@@ -1782,37 +2001,37 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="development/">
+                        <a class="text-2xl font-medium" href="../">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/advancednotch/">
+                        <a class="text-2xl font-medium" href="../advancednotch/">
                             
                             Advanced Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/firstnotch/">
+                        <a class="text-2xl font-medium" href="./">
                             
                             First Notch App
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/modal/">
+                        <a class="text-2xl font-medium" href="../modal/">
                             
                             Modals
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/notch/">
+                        <a class="text-2xl font-medium" href="../notch/">
                             
                             Notch
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="development/popup/">
+                        <a class="text-2xl font-medium" href="../popup/">
                             
                             Popups
                             
@@ -1827,13 +2046,13 @@
                     
                     <div class="flex flex-col gap-3">
                         
-                        <a class="text-2xl font-medium" href="plugins/">
+                        <a class="text-2xl font-medium" href="../../plugins/">
                             
                             Index
                             
                         </a>
                         
-                        <a class="text-2xl font-medium" href="plugins/plugin/">
+                        <a class="text-2xl font-medium" href="../../plugins/plugin/">
                             
                             First Plugin
                             
@@ -1857,6 +2076,60 @@
                                 <div id="toc" view-transition-name="toc" class="no-scrollbar overflow-y-auto px-8">
     <div class="flex flex-col gap-2 p-4 pt-0 text-sm">
         <p class="text-muted-foreground bg-background sticky top-0 h-6 text-xs">On This Page</p>
+        
+        
+        
+        
+        <a href="#notch-design"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#notch-design');">
+            Notch Design
+        </a>
+        
+
+        
+        <a href="#your-first-notch-app"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="2" onClick="deferSetActiveTocLink('#your-first-notch-app');">
+            Your First Notch App
+        </a>
+        
+        
+        <a href="#the-imports"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#the-imports');">
+            The imports
+        </a>
+        
+        <a href="#the-notchapplication"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#the-notchapplication');">
+            The NotchApplication
+        </a>
+        
+        <a href="#the-indicative-mode"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#the-indicative-mode');">
+            The Indicative Mode
+        </a>
+        
+        <a href="#the-active-mode"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#the-active-mode');">
+            The Active Mode
+        </a>
+        
+        <a href="#tips-tricks"
+            class="text-muted-foreground hover:text-foreground data-[active=true]:text-foreground text-[0.8rem] no-underline transition-colors data-[depth=3]:pl-4 data-[depth=4]:pl-6"
+            data-active="false" data-depth="3" onClick="deferSetActiveTocLink('#tips-tricks');">
+            Tips &amp; Tricks
+        </a>
+        
+        
+
+        
+        
+        
         
 
     </div>
@@ -1886,12 +2159,12 @@
     </div>
      
 
-<script src="search/main.js"></script>
+<script src="../../search/main.js"></script>
 
 
     
 
-    <script src="js/copy-button.js"></script>
+    <script src="../../js/copy-button.js"></script>
     <script>updatePygmentsStylesheet();</script>
     
     <script>fetchStargazers("https://github.com/eq-desktop/eqsh");</script>

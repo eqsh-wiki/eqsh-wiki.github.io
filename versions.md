@@ -22,7 +22,7 @@ summary: All versions and editions of eqSh
 - Name: -
 - Old Version Format: 0.0.1
 - Type: Alpha
-- Released: 2026-08-18
+- Released: 2025-08-18
 
 ![](./assets/versions/0.0.1.png)
 

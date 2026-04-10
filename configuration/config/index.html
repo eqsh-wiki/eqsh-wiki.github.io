@@ -1580,6 +1580,14 @@
     <span id="updated_at" class="text-sm opacity-50 hover:opacity-100 transition-opacity duration-200"
         title="last update (local time)"></span>
 </div>
+
+<script>
+    const updatedAt = document.getElementById("updated_at");
+    if (updatedAt) {
+        const date = new Date('2026-04-07T14:21:01+02:00');
+        updatedAt.textContent = date.toLocaleDateString();
+    }
+</script>
  
     </div>
   </div>
@@ -1593,8 +1601,8 @@ All configuration is defined in <strong>JSON</strong>, backed by strongly-typed 
 You can edit settings via the built-in application, or use the <code>au set</code> CLI command. Changes are hot-reloaded live.</p>
 </div>
 <h2 id="config-file-location">Config File Location<a class="headerlink" href="#config-file-location" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-text">~/.config/aureli/config.json
-</code></pre>
+<div class="codehilite"><pre><span></span><code>~/.config/aureli/config.json
+</code></pre></div>
 
 <ul>
 <li>Changes are <strong>watched live</strong></li>
@@ -1603,26 +1611,26 @@ You can edit settings via the built-in application, or use the <code>au set</cod
 <li>The file is rewritten when adapters update</li>
 </ul>
 <h2 id="top-level-structure">Top-Level Structure<a class="headerlink" href="#top-level-structure" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-json">{
-  &quot;account&quot;: {},
-  &quot;general&quot;: {},
-  &quot;appearance&quot;: {},
-  &quot;bar&quot;: {},
-  &quot;notch&quot;: {},
-  &quot;dock&quot;: {},
-  &quot;launchpad&quot;: {},
-  &quot;dialogs&quot;: {},
-  &quot;notifications&quot;: {},
-  &quot;osd&quot;: {},
-  &quot;screenEdges&quot;: {},
-  &quot;lockScreen&quot;: {},
-  &quot;wallpaper&quot;: {},
-  &quot;widgets&quot;: {},
-  &quot;screenshot&quot;: {},
-  &quot;misc&quot;: {},
-  &quot;sigrid&quot;: {}
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;account&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;general&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;appearance&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;bar&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;notch&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;dock&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;launchpad&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;dialogs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;notifications&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;osd&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;screenEdges&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;lockScreen&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;wallpaper&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;widgets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;screenshot&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;misc&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{},</span>
+<span class="w">  </span><span class="nt">&quot;sigrid&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>Each section corresponds <strong>1:1</strong> with a QML <code>JsonObject</code> component.</p>
 <h2 id="account"><code>account</code><a class="headerlink" href="#account" title="Permanent link">&para;</a></h2>

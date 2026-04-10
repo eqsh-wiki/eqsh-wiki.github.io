@@ -1612,6 +1612,14 @@
     <span id="updated_at" class="text-sm opacity-50 hover:opacity-100 transition-opacity duration-200"
         title="last update (local time)"></span>
 </div>
+
+<script>
+    const updatedAt = document.getElementById("updated_at");
+    if (updatedAt) {
+        const date = new Date('2026-04-07T14:21:01+02:00');
+        updatedAt.textContent = date.toLocaleDateString();
+    }
+</script>
  
     </div>
   </div>
@@ -1698,7 +1706,7 @@
 </tbody>
 </table></div>
 <p>Now this is quite annoying to implement, so we already did it for you:</p>
-<pre class="codehilite"><code class="language-text">bind = $mainMod Control, Q, global, eqsh:lock
+<div class="codehilite"><pre><span></span><code>bind = $mainMod Control, Q, global, eqsh:lock
 bind = $mainMod Control, P, global, eqsh:launchpad
 bindl = $mainMod SHIFT,   5, global, eqsh:screenshot
 bindl = $mainMod SHIFT,   3, global, eqsh:screenshotEntireScreen
@@ -1712,7 +1720,7 @@ bind = Control, XF86Fn, global, eqsh:controlCenterBluetooth
 bind = $mainMod Shift, H, global, eqsh:toggleNotchActiveInstance
 bind = $mainMod Shift, Y, exec, pkill qs
 bind = $mainMod Shift, Y, exec, pkill quickshell
-</code></pre>
+</code></pre></div>
 
 <div class="admonition warning">
 <p><strong>Hey!</strong><br />

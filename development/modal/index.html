@@ -1564,6 +1564,14 @@
     <span id="updated_at" class="text-sm opacity-50 hover:opacity-100 transition-opacity duration-200"
         title="last update (local time)"></span>
 </div>
+
+<script>
+    const updatedAt = document.getElementById("updated_at");
+    if (updatedAt) {
+        const date = new Date('2026-04-07T14:21:01+02:00');
+        updatedAt.textContent = date.toLocaleDateString();
+    }
+</script>
  
     </div>
   </div>
@@ -1575,105 +1583,105 @@
 <p>You can easily create a modal using the <code>au ipc modal instance</code> command.</p>
 <p>instance( <strong>appName</strong>, <strong>title</strong>, <strong>description</strong>, <strong>actionsJsonPath</strong>, <strong>iconPath</strong>, <strong>useIcon</strong> )</p>
 <p>Example:</p>
-<pre class="codehilite"><code class="language-bash">$ au ipc modal instance &quot;Name&quot; &quot;Title&quot; &quot;Description&quot; &quot;path/to/your/actions.json&quot; &quot;icon.png&quot; true
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>ipc<span class="w"> </span>modal<span class="w"> </span>instance<span class="w"> </span><span class="s2">&quot;Name&quot;</span><span class="w"> </span><span class="s2">&quot;Title&quot;</span><span class="w"> </span><span class="s2">&quot;Description&quot;</span><span class="w"> </span><span class="s2">&quot;path/to/your/actions.json&quot;</span><span class="w"> </span><span class="s2">&quot;icon.png&quot;</span><span class="w"> </span><span class="nb">true</span>
+</code></pre></div>
 
 <p>If you make the iconPath empty, then it will use the default icon. (See image above)</p>
 <h2 id="actions">Actions<a class="headerlink" href="#actions" title="Permanent link">&para;</a></h2>
 <p>You can make actions for your modal inside the <code>actions.json</code> file.</p>
 <p>It is a list of columns and rows.</p>
 <p>to create a column, you can use an array of actions.</p>
-<pre class="codehilite"><code class="language-json">[ // column
-    [ // row
-        { // action
-        }
-    ]
-]
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span><span class="w"> </span><span class="c1">// column</span>
+<span class="w">    </span><span class="p">[</span><span class="w"> </span><span class="c1">// row</span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="c1">// action</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">]</span>
+</code></pre></div>
 
 <p>Lets take a look at an action:</p>
-<pre class="codehilite"><code class="language-json">{
-    &quot;type&quot;: &quot;button&quot;,
-    &quot;primary&quot;: true,
-    &quot;width&quot;: 30,
-    &quot;iconPath&quot;: &quot;/home/enviction/MacTahoe-icon-theme/src/actions/symbolic/object-unlocked-symbolic.svg&quot;,
-    &quot;label&quot;: &quot;&quot;,
-    &quot;fillWidth&quot;: false
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;button&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;primary&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;iconPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/home/enviction/MacTahoe-icon-theme/src/actions/symbolic/object-unlocked-symbolic.svg&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;fillWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>This action is of <code>type</code> <strong>button</strong>, and it is the <code>primary</code> action, which makes it use the <strong>accent color</strong>. It has a width of 30px, leaving this empty will make it autosize. It has an icon, using iconPath for the path to the icon, and a label of an empty string. It also doesn't fill the width of the row.</p>
 <p>Lets look at another one</p>
-<pre class="codehilite"><code class="language-json">{
-    &quot;type&quot;: &quot;button&quot;,
-    &quot;label&quot;: &quot;Deny&quot;
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;button&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Deny&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>This is a very simple button, with a label of "Deny". Since this does not set any width or fillWidth, it will fill up the entire row.</p>
 <p>Theres of course not only buttons, but also inputs.</p>
-<pre class="codehilite"><code class="language-json">{
-    &quot;type&quot;: &quot;input&quot;,
-    &quot;variable&quot;: &quot;title&quot;,
-    &quot;inputType&quot;: &quot;password&quot;,
-    &quot;placeholder&quot;: &quot;&quot;,
-    &quot;command&quot;: &quot;notify-send '$title' 'Yay'&quot;
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;variable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;title&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;inputType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;placeholder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;notify-send &#39;$title&#39; &#39;Yay&#39;&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>This is an input, with a variable of "title", an inputType of "password", a placeholder of an empty string, and a command of "notify-send '$title' 'Yay'".</p>
 <p>The command is executed when the user presses enter.</p>
 <p>But what if you wanted to make the button also run the command?</p>
 <p>To do that give the input an <code>id</code>, lets say <code>inputAction</code><br />
 Then give the button an <code>callbackRedirect</code> with the <code>inputAction</code> id.</p>
-<pre class="codehilite"><code class="language-json">{
-    &quot;type&quot;: &quot;input&quot;,
-    &quot;variable&quot;: &quot;title&quot;,
-    &quot;inputType&quot;: &quot;password&quot;,
-    &quot;placeholder&quot;: &quot;&quot;,
-    &quot;command&quot;: &quot;notify-send '$title' 'Yay'&quot;,
-    &quot;id&quot;: &quot;inputAction&quot;
-},
-{
-    &quot;type&quot;: &quot;button&quot;,
-    &quot;primary&quot;: true,
-    &quot;label&quot;: &quot;Submit&quot;,
-    &quot;callbackRedirect&quot;: &quot;inputAction&quot; 
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;variable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;title&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;inputType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;placeholder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;notify-send &#39;$title&#39; &#39;Yay&#39;&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;inputAction&quot;</span>
+<span class="p">},</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;button&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;primary&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Submit&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;callbackRedirect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;inputAction&quot;</span><span class="w"> </span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>Now when pressing the button, the command of the input will be executed.</p>
 <h2 id="example-file">Example file<a class="headerlink" href="#example-file" title="Permanent link">&para;</a></h2>
 <details>
 <summary>actions.json</summary>
-<pre class="codehilite"><code class="language-json">[
-    [
-        {
-            &quot;id&quot;: &quot;input&quot;,
-            &quot;type&quot;: &quot;input&quot;,
-            &quot;variable&quot;: &quot;title&quot;,
-            &quot;inputType&quot;: &quot;password&quot;,
-            &quot;placeholder&quot;: &quot;&quot;,
-            &quot;command&quot;: &quot;equora ipc popup openPopup '' 'MyModal' 'This is a Title' '$title' 200 'banner'&quot;
-        },
-        {
-            &quot;type&quot;: &quot;button&quot;,
-            &quot;primary&quot;: true,
-            &quot;width&quot;: 50,
-            &quot;iconPath&quot;: &quot;&quot;,
-            &quot;label&quot;: &quot;Send&quot;,
-            &quot;callbackRedirect&quot;: &quot;input&quot;,
-            &quot;fillWidth&quot;: false
-        }
-    ],
-    [
-        {
-            &quot;type&quot;: &quot;button&quot;,
-            &quot;label&quot;: &quot;Deny&quot;
-        }
-    ]
-]
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;variable&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;title&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;inputType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;password&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;placeholder&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;command&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;equora ipc popup openPopup &#39;&#39; &#39;MyModal&#39; &#39;This is a Title&#39; &#39;$title&#39; 200 &#39;banner&#39;&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;button&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;primary&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;width&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;iconPath&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Send&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;callbackRedirect&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;input&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;fillWidth&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;button&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;label&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Deny&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">]</span>
+</code></pre></div>
 
 </details>
   </div>

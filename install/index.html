@@ -1580,6 +1580,14 @@
     <span id="updated_at" class="text-sm opacity-50 hover:opacity-100 transition-opacity duration-200"
         title="last update (local time)"></span>
 </div>
+
+<script>
+    const updatedAt = document.getElementById("updated_at");
+    if (updatedAt) {
+        const date = new Date('2026-04-07T14:21:01+02:00');
+        updatedAt.textContent = date.toLocaleDateString();
+    }
+</script>
  
     </div>
   </div>
@@ -1590,20 +1598,20 @@
 <p>Don't forget to have python and <a href="https://quickshell.org/docs/v0.2.1/guide/install-setup/">Quickshell</a> installed on your system.</p>
 </div>
 <div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Curl Installation</label><div class="tabbed-content">
-<pre class="codehilite"><code class="language-bash">$ curl -fsSL https://eqsh-wiki.github.io/get | bash
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://eqsh-wiki.github.io/get<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+</code></pre></div>
 
 <hr />
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Manual Installation</label><div class="tabbed-content">
-<pre class="codehilite"><code class="language-bash">$ git clone https://github.com/eq-desktop/cli.git
-$ cd cli/
-$ ./install.sh
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/eq-desktop/cli.git
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>cli/
+$<span class="w"> </span>./install.sh
+</code></pre></div>
 
 <p>Then run the install command:</p>
-<pre class="codehilite"><code class="language-bash">$ au install
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>install
+</code></pre></div>
 
 <hr />
 </div>

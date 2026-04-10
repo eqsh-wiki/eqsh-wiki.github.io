@@ -1587,6 +1587,14 @@
     <span id="updated_at" class="text-sm opacity-50 hover:opacity-100 transition-opacity duration-200"
         title="last update (local time)"></span>
 </div>
+
+<script>
+    const updatedAt = document.getElementById("updated_at");
+    if (updatedAt) {
+        const date = new Date('2026-04-07T14:21:01+02:00');
+        updatedAt.textContent = date.toLocaleDateString();
+    }
+</script>
  
     </div>
   </div>
@@ -1615,172 +1623,172 @@ This mode is called <strong>Notch Informative Mode</strong>  </p>
 <h2 id="your-first-notch-app">Your First Notch App<a class="headerlink" href="#your-first-notch-app" title="Permanent link">&para;</a></h2>
 <p>The first thing you need to do is to create a new Notch Application.</p>
 <p>To create a new Notch Application you first have to create a new QML file.</p>
-<pre class="codehilite"><code class="language-bash">$ mkdir MyNotchApp
-$ cd MyNotchApp
-$ touch Main.qml
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>mkdir<span class="w"> </span>MyNotchApp
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>MyNotchApp
+$<span class="w"> </span>touch<span class="w"> </span>Main.qml
+</code></pre></div>
 
 <p>And then inside the file create the Notch Application.
 A Notch Application consists of these parts:</p>
 <h3 id="the-imports">The <a href="https://doc.qt.io/qt-6/qtqml-syntax-imports.html">imports</a><a class="headerlink" href="#the-imports" title="Permanent link">&para;</a></h3>
 <p>The Imports are at the top of your file and define the modules you want to use.</p>
-<pre class="codehilite"><code class="language-qml">import QtQuick
-import Quickshell
-import qs
-import qs.ui.controls.auxiliary.notch // required for NotchApplication
-import qs.ui.controls.primitives // required for CFText, CFI, CFVI, ...
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="kr">import</span> <span class="nx">QtQuick</span>
+<span class="kr">import</span> <span class="nx">Quickshell</span>
+<span class="kr">import</span> <span class="nx">qs</span>
+<span class="kr">import</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">controls</span><span class="p">.</span><span class="nx">auxiliary</span><span class="p">.</span><span class="nx">notch</span> <span class="c1">// required for NotchApplication</span>
+<span class="kr">import</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">controls</span><span class="p">.</span><span class="nx">primitives</span> <span class="c1">// required for CFText, CFI, CFVI, ...</span>
+</code></pre></div>
 
 <h3 id="the-notchapplication">The NotchApplication<a class="headerlink" href="#the-notchapplication" title="Permanent link">&para;</a></h3>
 <p>The NotchApplication is the main part of your Notch App.</p>
-<pre class="codehilite"><code class="language-qml">NotchApplication {
-    id: root // The id of your Notch App, this should always be `root`
-    details.version: &quot;Elephant-1&quot; // This is the API version
-    details.appType: &quot;indicator&quot; // This is the app type, it can either be indicator or media
-    // The height and width of your App while in Active Mode
-    meta.height: 60
-    meta.width: 300
-    // notch.defaultHeight is a special property that defines the default height of your Notch App
-    meta.indicativeHeight: notch.defaultHeight // The height of your App while in Indicative Mode
-    meta.informativeHeight: meta.indicativeHeight+20 // The height of your App while in Informative Mode
+<div class="codehilite"><pre><span></span><code><span class="nx">NotchApplication</span> <span class="p">{</span>
+    <span class="kd">id: root</span> <span class="c1">// The id of your Notch App, this should always be `root`</span>
+    <span class="k">details.version:</span> <span class="s2">&quot;Elephant-1&quot;</span> <span class="c1">// This is the API version</span>
+    <span class="k">details.appType:</span> <span class="s2">&quot;indicator&quot;</span> <span class="c1">// This is the app type, it can either be indicator or media</span>
+    <span class="c1">// The height and width of your App while in Active Mode</span>
+    <span class="k">meta.height:</span> <span class="mi">60</span>
+    <span class="k">meta.width:</span> <span class="mi">300</span>
+    <span class="c1">// notch.defaultHeight is a special property that defines the default height of your Notch App</span>
+    <span class="k">meta.indicativeHeight:</span> <span class="nx">notch</span><span class="p">.</span><span class="nx">defaultHeight</span> <span class="c1">// The height of your App while in Indicative Mode</span>
+    <span class="k">meta.informativeHeight:</span> <span class="nx">meta</span><span class="p">.</span><span class="nx">indicativeHeight</span><span class="o">+</span><span class="mi">20</span> <span class="c1">// The height of your App while in Informative Mode</span>
 
-    onlyActive: false // Set this to true if you want to make your app active by default and only active
-    isActive: false // Set this to true if you want to make your app active by default
-    noMode: false // Prevents the app from switching modes
-    // This is rather for eqSh itself and not recommended
-    immortal: false // Will keep the app running even if it's not focused and prevents it from being killed by the system
+    <span class="k">onlyActive:</span> <span class="kc">false</span> <span class="c1">// Set this to true if you want to make your app active by default and only active</span>
+    <span class="k">isActive:</span> <span class="kc">false</span> <span class="c1">// Set this to true if you want to make your app active by default</span>
+    <span class="k">noMode:</span> <span class="kc">false</span> <span class="c1">// Prevents the app from switching modes</span>
+    <span class="c1">// This is rather for eqSh itself and not recommended</span>
+    <span class="k">immortal:</span> <span class="kc">false</span> <span class="c1">// Will keep the app running even if it&#39;s not focused and prevents it from being killed by the system</span>
 
-    indicative: // see the next section
-    active: // see the next section
-}
-</code></pre>
+    <span class="k">indicative:</span> <span class="c1">// see the next section</span>
+    <span class="k">active:</span> <span class="c1">// see the next section</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>You most likely won't need to have that many properties, this is a minimal example:</p>
-<pre class="codehilite"><code class="language-qml">NotchApplication {
-    id: root
-    details.version: &quot;Elephant-1&quot;
-    details.appType: &quot;indicator&quot;
-    meta.height: 60
-    meta.width: 300
+<div class="codehilite"><pre><span></span><code><span class="nx">NotchApplication</span> <span class="p">{</span>
+    <span class="kd">id: root</span>
+    <span class="k">details.version:</span> <span class="s2">&quot;Elephant-1&quot;</span>
+    <span class="k">details.appType:</span> <span class="s2">&quot;indicator&quot;</span>
+    <span class="k">meta.height:</span> <span class="mi">60</span>
+    <span class="k">meta.width:</span> <span class="mi">300</span>
 
-    indicative: // see the next section
-    active: // see the next section
-}
-</code></pre>
+    <span class="k">indicative:</span> <span class="c1">// see the next section</span>
+    <span class="k">active:</span> <span class="c1">// see the next section</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="the-indicative-mode">The Indicative Mode<a class="headerlink" href="#the-indicative-mode" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="language-qml">indicative: Item {
-    CFText { // This is provided by eqsh and is an improved version of Text
-        anchors.top: parent.top
-        anchors.topMargin: 6
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        text: &quot;Indicative Mode&quot;
-    }
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">indicative:</span> <span class="nx">Item</span> <span class="p">{</span>
+    <span class="nx">CFText</span> <span class="p">{</span> <span class="c1">// This is provided by eqsh and is an improved version of Text</span>
+        <span class="k">anchors.top:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">top</span>
+        <span class="k">anchors.topMargin:</span> <span class="mi">6</span>
+        <span class="k">anchors.left:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">left</span>
+        <span class="k">anchors.leftMargin:</span> <span class="mi">10</span>
+        <span class="k">text:</span> <span class="s2">&quot;Indicative Mode&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="the-active-mode">The Active Mode<a class="headerlink" href="#the-active-mode" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="language-qml">active: Item {
-    CFText {
-        id: text
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: parent.left
-        anchors.leftMargin: 10
-        text: &quot;Active Mode&quot;
-    }
-    NotchButton { // This is provided by eqsh
-        id: close
-        width: 120
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: text.right
-        anchors.leftMargin: 10
-        text: &quot;Click to Close&quot;
-        color: &quot;#ffffff&quot;
-        onClicked: root.closeMe()
-    }
-    NotchButton {
-        id: test
-        iconSource: &quot;file:///home/enviction/Downloads/lock.svg&quot;
-        iconSize: 20
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: close.right
-        anchors.leftMargin: 10
-        color: &quot;#ffffff&quot;
-        backgroundColor: &quot;#502369ff&quot;
-        iconColor: &quot;#2369ff&quot;
-    }
-}
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="k">active:</span> <span class="nx">Item</span> <span class="p">{</span>
+    <span class="nx">CFText</span> <span class="p">{</span>
+        <span class="kd">id: text</span>
+        <span class="k">anchors.verticalCenter:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">verticalCenter</span>
+        <span class="k">anchors.left:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">left</span>
+        <span class="k">anchors.leftMargin:</span> <span class="mi">10</span>
+        <span class="k">text:</span> <span class="s2">&quot;Active Mode&quot;</span>
+    <span class="p">}</span>
+    <span class="nx">NotchButton</span> <span class="p">{</span> <span class="c1">// This is provided by eqsh</span>
+        <span class="kd">id: close</span>
+        <span class="k">width:</span> <span class="mi">120</span>
+        <span class="k">anchors.verticalCenter:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">verticalCenter</span>
+        <span class="k">anchors.left:</span> <span class="nx">text</span><span class="p">.</span><span class="nx">right</span>
+        <span class="k">anchors.leftMargin:</span> <span class="mi">10</span>
+        <span class="k">text:</span> <span class="s2">&quot;Click to Close&quot;</span>
+        <span class="k">color:</span> <span class="s2">&quot;#ffffff&quot;</span>
+        <span class="k">onClicked:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">closeMe</span><span class="p">()</span>
+    <span class="p">}</span>
+    <span class="nx">NotchButton</span> <span class="p">{</span>
+        <span class="kd">id: test</span>
+        <span class="k">iconSource:</span> <span class="s2">&quot;file:///home/enviction/Downloads/lock.svg&quot;</span>
+        <span class="k">iconSize:</span> <span class="mi">20</span>
+        <span class="k">anchors.verticalCenter:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">verticalCenter</span>
+        <span class="k">anchors.left:</span> <span class="nx">close</span><span class="p">.</span><span class="nx">right</span>
+        <span class="k">anchors.leftMargin:</span> <span class="mi">10</span>
+        <span class="k">color:</span> <span class="s2">&quot;#ffffff&quot;</span>
+        <span class="k">backgroundColor:</span> <span class="s2">&quot;#502369ff&quot;</span>
+        <span class="k">iconColor:</span> <span class="s2">&quot;#2369ff&quot;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 <p>This is what it would look like when you run it.</p>
 <p><img alt="Your First Notch App" src="../../assets/development/notch/firstnotch.png" /></p>
 <p>But wait, how do you run it?</p>
-<pre class="codehilite"><code class="language-bash">$ cd MyNotchApp
-$ au new_notch_app ./Main.qml &quot;MyNotchApp&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>MyNotchApp
+$<span class="w"> </span>au<span class="w"> </span>new_notch_app<span class="w"> </span>./Main.qml<span class="w"> </span><span class="s2">&quot;MyNotchApp&quot;</span>
+</code></pre></div>
 
 <p>Want to end the currently focused app?</p>
-<pre class="codehilite"><code class="language-bash">$ au destroy_notch_app
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>destroy_notch_app
+</code></pre></div>
 
 <p>Heres the entire file:</p>
 <details>
 <summary>Main.qml</summary>
-<pre class="codehilite"><code class="language-qml">import QtQuick
-import Quickshell
-import qs
-import qs.ui.controls.auxiliary.notch
-import qs.ui.controls.primitives
+<div class="codehilite"><pre><span></span><code><span class="kr">import</span> <span class="nx">QtQuick</span>
+<span class="kr">import</span> <span class="nx">Quickshell</span>
+<span class="kr">import</span> <span class="nx">qs</span>
+<span class="kr">import</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">controls</span><span class="p">.</span><span class="nx">auxiliary</span><span class="p">.</span><span class="nx">notch</span>
+<span class="kr">import</span> <span class="nx">qs</span><span class="p">.</span><span class="nx">ui</span><span class="p">.</span><span class="nx">controls</span><span class="p">.</span><span class="nx">primitives</span>
 
-NotchApplication {
-    id: root
-    details.version: &quot;Elephant-1&quot;
-    details.appType: &quot;indicator&quot;
-    meta.height: 60
-    meta.width: 300
+<span class="nx">NotchApplication</span> <span class="p">{</span>
+    <span class="kd">id: root</span>
+    <span class="k">details.version:</span> <span class="s2">&quot;Elephant-1&quot;</span>
+    <span class="k">details.appType:</span> <span class="s2">&quot;indicator&quot;</span>
+    <span class="k">meta.height:</span> <span class="mi">60</span>
+    <span class="k">meta.width:</span> <span class="mi">300</span>
 
-    indicative: Item {
-        CFText {
-            anchors.top: parent.top
-            anchors.topMargin: 6
-            anchors.left: parent.left
-            anchors.leftMargin: 10
-            text: &quot;Indicative Mode&quot;
-        }
-    }
-    active: Item {
-        CFText {
-            id: text
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: parent.left
-            anchors.leftMargin: 10
-            text: &quot;Active Mode&quot;
-        }
-        NotchButton {
-            id: close
-            width: 120
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: text.right
-            anchors.leftMargin: 10
-            text: &quot;Click to Close&quot;
-            color: &quot;#ffffff&quot;
-            onClicked: root.closeMe()
-        }
-        NotchButton {
-            id: test
-            iconSource: &quot;file:///home/enviction/Downloads/lock.svg&quot;
-            iconSize: 20
-            anchors.verticalCenter: parent.verticalCenter
-            anchors.left: close.right
-            anchors.leftMargin: 10
-            color: &quot;#ffffff&quot;
-            backgroundColor: &quot;#502369ff&quot;
-            iconColor: &quot;#2369ff&quot;
-        }
-    }
-}
-</code></pre>
+    <span class="k">indicative:</span> <span class="nx">Item</span> <span class="p">{</span>
+        <span class="nx">CFText</span> <span class="p">{</span>
+            <span class="k">anchors.top:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">top</span>
+            <span class="k">anchors.topMargin:</span> <span class="mi">6</span>
+            <span class="k">anchors.left:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">left</span>
+            <span class="k">anchors.leftMargin:</span> <span class="mi">10</span>
+            <span class="k">text:</span> <span class="s2">&quot;Indicative Mode&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">active:</span> <span class="nx">Item</span> <span class="p">{</span>
+        <span class="nx">CFText</span> <span class="p">{</span>
+            <span class="kd">id: text</span>
+            <span class="k">anchors.verticalCenter:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">verticalCenter</span>
+            <span class="k">anchors.left:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">left</span>
+            <span class="k">anchors.leftMargin:</span> <span class="mi">10</span>
+            <span class="k">text:</span> <span class="s2">&quot;Active Mode&quot;</span>
+        <span class="p">}</span>
+        <span class="nx">NotchButton</span> <span class="p">{</span>
+            <span class="kd">id: close</span>
+            <span class="k">width:</span> <span class="mi">120</span>
+            <span class="k">anchors.verticalCenter:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">verticalCenter</span>
+            <span class="k">anchors.left:</span> <span class="nx">text</span><span class="p">.</span><span class="nx">right</span>
+            <span class="k">anchors.leftMargin:</span> <span class="mi">10</span>
+            <span class="k">text:</span> <span class="s2">&quot;Click to Close&quot;</span>
+            <span class="k">color:</span> <span class="s2">&quot;#ffffff&quot;</span>
+            <span class="k">onClicked:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">closeMe</span><span class="p">()</span>
+        <span class="p">}</span>
+        <span class="nx">NotchButton</span> <span class="p">{</span>
+            <span class="kd">id: test</span>
+            <span class="k">iconSource:</span> <span class="s2">&quot;file:///home/enviction/Downloads/lock.svg&quot;</span>
+            <span class="k">iconSize:</span> <span class="mi">20</span>
+            <span class="k">anchors.verticalCenter:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">verticalCenter</span>
+            <span class="k">anchors.left:</span> <span class="nx">close</span><span class="p">.</span><span class="nx">right</span>
+            <span class="k">anchors.leftMargin:</span> <span class="mi">10</span>
+            <span class="k">color:</span> <span class="s2">&quot;#ffffff&quot;</span>
+            <span class="k">backgroundColor:</span> <span class="s2">&quot;#502369ff&quot;</span>
+            <span class="k">iconColor:</span> <span class="s2">&quot;#2369ff&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
 
 </details>
 <h3 id="tips-tricks">Tips &amp; Tricks<a class="headerlink" href="#tips-tricks" title="Permanent link">&para;</a></h3>

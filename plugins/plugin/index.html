@@ -1551,6 +1551,14 @@
     <span id="updated_at" class="text-sm opacity-50 hover:opacity-100 transition-opacity duration-200"
         title="last update (local time)"></span>
 </div>
+
+<script>
+    const updatedAt = document.getElementById("updated_at");
+    if (updatedAt) {
+        const date = new Date('2026-04-07T14:21:01+02:00');
+        updatedAt.textContent = date.toLocaleDateString();
+    }
+</script>
  
     </div>
   </div>
@@ -1560,59 +1568,59 @@
 <hr />
 <h2 id="plugin-structure">Plugin Structure<a class="headerlink" href="#plugin-structure" title="Permanent link">&para;</a></h2>
 <p>At the core of every plugin is a <code>plugin.kvo</code> file. Here's an example:</p>
-<pre class="codehilite"><code class="language-kavo">plugin &quot;aureli-base&quot; {
+<div class="codehilite"><pre><span></span><code><span class="n">plugin</span><span class="w"> </span><span class="s">&quot;aureli-base&quot;</span><span class="w"> </span><span class="p">{</span>
 
-    meta {
-        name: &quot;Base Aureli System&quot;
-        version: &quot;0.1.0&quot;
-        api: &quot;Elephant-1&quot;
-        description: &quot;This is the Base plugin for all Aureli Widgets&quot;
-        author: &quot;Eq Desktop&quot;
-    }
+<span class="w">    </span><span class="n">meta</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Base Aureli System&quot;</span>
+<span class="w">        </span><span class="n">version</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;0.1.0&quot;</span>
+<span class="w">        </span><span class="n">api</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Elephant-1&quot;</span>
+<span class="w">        </span><span class="n">description</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;This is the Base plugin for all Aureli Widgets&quot;</span>
+<span class="w">        </span><span class="n">author</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Eq Desktop&quot;</span>
+<span class="w">    </span><span class="p">}</span>
 
-    @import &quot;Weather.kvo&quot;
+<span class="w">    </span><span class="cp">@import</span><span class="w"> </span><span class="s2">&quot;Weather.kvo&quot;</span>
 
-    widget {
-        meta {
-            name: &quot;Image&quot;
-            id: &quot;image&quot;
-        }
-        onRender() {
-            import QtQuick
-            import Quickshell.Widgets
-            import qs.ui.controls.primitives
-            import QtQuick.Layouts
-            import QtQuick.Controls
-            import qs.ui.controls.providers
-            import qs.ui.controls.auxiliary.widget
-            import qs.config
-            import qs
-            WidgetItem {
-                id: root
+<span class="w">    </span><span class="n">widget</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">meta</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">name</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;Image&quot;</span>
+<span class="w">            </span><span class="kt">id</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;image&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="nf">onRender</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">import</span><span class="w"> </span><span class="n">QtQuick</span>
+<span class="w">            </span><span class="n">import</span><span class="w"> </span><span class="n">Quickshell</span><span class="p">.</span><span class="n">Widgets</span>
+<span class="w">            </span><span class="n">import</span><span class="w"> </span><span class="n">qs</span><span class="p">.</span><span class="n">ui</span><span class="p">.</span><span class="n">controls</span><span class="p">.</span><span class="n">primitives</span>
+<span class="w">            </span><span class="n">import</span><span class="w"> </span><span class="n">QtQuick</span><span class="p">.</span><span class="n">Layouts</span>
+<span class="w">            </span><span class="n">import</span><span class="w"> </span><span class="n">QtQuick</span><span class="p">.</span><span class="n">Controls</span>
+<span class="w">            </span><span class="n">import</span><span class="w"> </span><span class="n">qs</span><span class="p">.</span><span class="n">ui</span><span class="p">.</span><span class="n">controls</span><span class="p">.</span><span class="n">providers</span>
+<span class="w">            </span><span class="n">import</span><span class="w"> </span><span class="n">qs</span><span class="p">.</span><span class="n">ui</span><span class="p">.</span><span class="n">controls</span><span class="p">.</span><span class="n">auxiliary</span><span class="p">.</span><span class="n">widget</span>
+<span class="w">            </span><span class="n">import</span><span class="w"> </span><span class="n">qs</span><span class="p">.</span><span class="n">config</span>
+<span class="w">            </span><span class="n">import</span><span class="w"> </span><span class="n">qs</span>
+<span class="w">            </span><span class="n">WidgetItem</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="kt">id</span><span class="o">:</span><span class="w"> </span><span class="n">root</span>
 
-                ClippingRectangle {
-                    anchors.fill: parent
-                    anchors.margins: 4
-                    radius: 22
-                    color: &quot;transparent&quot;
-                    CFI {
-                        id: bg
-                        anchors.fill: parent
-                        colorized: false
-                        fillMode: root.options?.fill || true ? Image.PreserveAspectCrop : Image.PreserveAspectFit
-                        source: root.options?.source || &quot;&quot;
-                    }
-                }
-            }
-        }
+<span class="w">                </span><span class="n">ClippingRectangle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                    </span><span class="n">anchors</span><span class="p">.</span><span class="n">fill</span><span class="o">:</span><span class="w"> </span><span class="n">parent</span>
+<span class="w">                    </span><span class="n">anchors</span><span class="p">.</span><span class="n">margins</span><span class="o">:</span><span class="w"> </span><span class="mi">4</span>
+<span class="w">                    </span><span class="n">radius</span><span class="o">:</span><span class="w"> </span><span class="mi">22</span>
+<span class="w">                    </span><span class="n">color</span><span class="o">:</span><span class="w"> </span><span class="s">&quot;transparent&quot;</span>
+<span class="w">                    </span><span class="n">CFI</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                        </span><span class="kt">id</span><span class="o">:</span><span class="w"> </span><span class="n">bg</span>
+<span class="w">                        </span><span class="n">anchors</span><span class="p">.</span><span class="n">fill</span><span class="o">:</span><span class="w"> </span><span class="n">parent</span>
+<span class="w">                        </span><span class="n">colorized</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">                        </span><span class="n">fillMode</span><span class="o">:</span><span class="w"> </span><span class="n">root</span><span class="p">.</span><span class="n">options</span><span class="o">?</span><span class="p">.</span><span class="n">fill</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">Image</span><span class="p">.</span><span class="n">PreserveAspectCrop</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">Image</span><span class="p">.</span><span class="n">PreserveAspectFit</span>
+<span class="w">                        </span><span class="n">source</span><span class="o">:</span><span class="w"> </span><span class="n">root</span><span class="p">.</span><span class="n">options</span><span class="o">?</span><span class="p">.</span><span class="n">source</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="s">&quot;&quot;</span>
+<span class="w">                    </span><span class="p">}</span>
+<span class="w">                </span><span class="p">}</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
 
-        onPlacement(data) {
-            data.allow()
-        }
-    }
+<span class="w">        </span><span class="nf">onPlacement</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">data</span><span class="p">.</span><span class="nf">allow</span><span class="p">()</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
 
-}
-</code></pre>
+<span class="p">}</span>
+</code></pre></div>
 
 <h3 id="breaking-it-down">Breaking It Down<a class="headerlink" href="#breaking-it-down" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1650,8 +1658,8 @@
 <hr />
 <h2 id="creating-a-new-plugin">Creating a New Plugin<a class="headerlink" href="#creating-a-new-plugin" title="Permanent link">&para;</a></h2>
 <p>To create a new plugin, you can use the CLI:</p>
-<pre class="codehilite"><code class="language-bash">$ au plugin new
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>plugin<span class="w"> </span>new
+</code></pre></div>
 
 <p>It will prompt you for:</p>
 <ul>
@@ -1667,15 +1675,15 @@
 <hr />
 <h2 id="loading-a-plugin-from-a-directory">Loading a Plugin from a Directory<a class="headerlink" href="#loading-a-plugin-from-a-directory" title="Permanent link">&para;</a></h2>
 <p>If you already have a plugin folder locally and want to load it into Aureli:</p>
-<pre class="codehilite"><code class="language-bash">$ au plugin load ./MyPlugin
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>plugin<span class="w"> </span>load<span class="w"> </span>./MyPlugin
+</code></pre></div>
 
 <p>This copies the folder into Aureli’s <code>plugins</code> directory.</p>
 <hr />
 <h2 id="installing-a-plugin-from-git">Installing a Plugin from Git<a class="headerlink" href="#installing-a-plugin-from-git" title="Permanent link">&para;</a></h2>
 <p>You can also install a plugin directly from a repository:</p>
-<pre class="codehilite"><code class="language-bash">$ au plugin install https://github.com/username/myplugin.git
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>plugin<span class="w"> </span>install<span class="w"> </span>https://github.com/username/myplugin.git
+</code></pre></div>
 
 <p>The CLI will:</p>
 <ol>
@@ -1687,43 +1695,43 @@
 <hr />
 <h2 id="uninstalling-a-plugin">Uninstalling a Plugin<a class="headerlink" href="#uninstalling-a-plugin" title="Permanent link">&para;</a></h2>
 <p>Remove a plugin by its ID:</p>
-<pre class="codehilite"><code class="language-bash">$ au plugin uninstall my-plugin
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>plugin<span class="w"> </span>uninstall<span class="w"> </span>my-plugin
+</code></pre></div>
 
 <p>This deletes the plugin folder from Aureli.</p>
 <hr />
 <h2 id="updating-a-plugin">Updating a Plugin<a class="headerlink" href="#updating-a-plugin" title="Permanent link">&para;</a></h2>
 <p>Update a plugin (if it’s a git repository) using:</p>
-<pre class="codehilite"><code class="language-bash">$ au plugin update my-plugin
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>plugin<span class="w"> </span>update<span class="w"> </span>my-plugin
+</code></pre></div>
 
 <p>The CLI performs a <code>git pull --ff-only</code> in the plugin’s folder.</p>
 <hr />
 <h2 id="listing-installed-plugins">Listing Installed Plugins<a class="headerlink" href="#listing-installed-plugins" title="Permanent link">&para;</a></h2>
 <p>To see all installed plugins:</p>
-<pre class="codehilite"><code class="language-bash">$ au plugin list
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>plugin<span class="w"> </span>list
+</code></pre></div>
 
 <p>Example output:</p>
-<pre class="codehilite"><code> · Base Aureli System — Eq Desktop
+<div class="codehilite"><pre><span></span><code> · Base Aureli System — Eq Desktop
  ├ Id: aureli-base
  └ Enabled: enabled
-</code></pre>
+</code></pre></div>
 
 <hr />
 <h2 id="viewing-plugin-meta">Viewing Plugin Meta<a class="headerlink" href="#viewing-plugin-meta" title="Permanent link">&para;</a></h2>
 <p>To view plugin metadata without installing:</p>
-<pre class="codehilite"><code class="language-bash">$ au plugin meta https://github.com/username/myplugin.git
-</code></pre>
+<div class="codehilite"><pre><span></span><code>$<span class="w"> </span>au<span class="w"> </span>plugin<span class="w"> </span>meta<span class="w"> </span>https://github.com/username/myplugin.git
+</code></pre></div>
 
 <p>Example output:</p>
-<pre class="codehilite"><code>Information for 'MyPlugin' Plugin:
-Name: MyPlugin
-Version: 0.1.0
-API: Elephant-1
-Description: A simple plugin example
-Author: You
-</code></pre>
+<div class="codehilite"><pre><span></span><code><span class="nx">Information</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="err">&#39;</span><span class="nx">MyPlugin</span><span class="err">&#39;</span><span class="w"> </span><span class="nx">Plugin</span><span class="p">:</span>
+<span class="nx">Name</span><span class="p">:</span><span class="w"> </span><span class="nx">MyPlugin</span>
+<span class="nx">Version</span><span class="p">:</span><span class="w"> </span><span class="m m-Double">0.1.0</span>
+<span class="nx">API</span><span class="p">:</span><span class="w"> </span><span class="nx">Elephant</span><span class="o">-</span><span class="mi">1</span>
+<span class="nx">Description</span><span class="p">:</span><span class="w"> </span><span class="nx">A</span><span class="w"> </span><span class="nx">simple</span><span class="w"> </span><span class="nx">plugin</span><span class="w"> </span><span class="nx">example</span>
+<span class="nx">Author</span><span class="p">:</span><span class="w"> </span><span class="nx">You</span>
+</code></pre></div>
 
 <hr />
 <h2 id="tips-tricks">Tips &amp; Tricks<a class="headerlink" href="#tips-tricks" title="Permanent link">&para;</a></h2>

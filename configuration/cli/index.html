@@ -1580,6 +1580,14 @@
     <span id="updated_at" class="text-sm opacity-50 hover:opacity-100 transition-opacity duration-200"
         title="last update (local time)"></span>
 </div>
+
+<script>
+    const updatedAt = document.getElementById("updated_at");
+    if (updatedAt) {
+        const date = new Date('2026-04-07T14:21:01+02:00');
+        updatedAt.textContent = date.toLocaleDateString();
+    }
+</script>
  
     </div>
   </div>
@@ -1603,16 +1611,16 @@ It acts as a <strong>runtime controller</strong>, <strong>Msg bridge</strong>, a
 </ul>
 <hr />
 <h2 id="binary">Binary<a class="headerlink" href="#binary" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-bash">au [command] [options]
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 
 <p>You can override the Aureli installation path:</p>
-<pre class="codehilite"><code class="language-bash">au -l /custom/path run
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>-l<span class="w"> </span>/custom/path<span class="w"> </span>run
+</code></pre></div>
 
 <p>Default:</p>
-<pre class="codehilite"><code class="language-text">~/.local/share/equora/eqsh
-</code></pre>
+<div class="codehilite"><pre><span></span><code>~/.local/share/equora/eqsh
+</code></pre></div>
 
 <hr />
 <h2 id="runtime-paths">Runtime Paths<a class="headerlink" href="#runtime-paths" title="Permanent link">&para;</a></h2>
@@ -1641,8 +1649,8 @@ It acts as a <strong>runtime controller</strong>, <strong>Msg bridge</strong>, a
 <h1 id="core-commands">Core Commands<a class="headerlink" href="#core-commands" title="Permanent link">&para;</a></h1>
 <h2 id="run-r"><code>run</code> (<code>r</code>)<a class="headerlink" href="#run-r" title="Permanent link">&para;</a></h2>
 <p>Start Aureli.</p>
-<pre class="codehilite"><code class="language-bash">au run # or au r
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>run<span class="w"> </span><span class="c1"># or au r</span>
+</code></pre></div>
 
 <div class="table-wrapper"><table>
 <thead>
@@ -1716,18 +1724,18 @@ It acts as a <strong>runtime controller</strong>, <strong>Msg bridge</strong>, a
 </tr>
 </tbody>
 </table></div>
-<pre class="codehilite"><code class="language-bash">au plugin [command] [options]
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>plugin<span class="w"> </span><span class="o">[</span>command<span class="o">]</span><span class="w"> </span><span class="o">[</span>options<span class="o">]</span>
+</code></pre></div>
 
 <h2 id="quit"><code>quit</code><a class="headerlink" href="#quit" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-bash">au quit
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>quit
+</code></pre></div>
 
 <p>Force kills Aureli using SIGKILL.</p>
 <hr />
 <h2 id="restart"><code>restart</code><a class="headerlink" href="#restart" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-bash">au restart
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>restart
+</code></pre></div>
 
 <p>Sequence:</p>
 <ol>
@@ -1736,32 +1744,32 @@ It acts as a <strong>runtime controller</strong>, <strong>Msg bridge</strong>, a
 </ol>
 <hr />
 <h2 id="lock"><code>lock</code><a class="headerlink" href="#lock" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-bash">au lock
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>lock
+</code></pre></div>
 
 <p>Locks the screen.</p>
 <hr />
 <h2 id="update"><code>update</code><a class="headerlink" href="#update" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-bash">au update [cli|aureli]
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>update<span class="w"> </span><span class="o">[</span>cli<span class="p">|</span>aureli<span class="o">]</span>
+</code></pre></div>
 
 <p>Git pulls eqSh repo.</p>
 <hr />
 <h2 id="install"><code>install</code><a class="headerlink" href="#install" title="Permanent link">&para;</a></h2>
 <p>Installs Aureli from GitHub.</p>
-<pre class="codehilite"><code class="language-bash">au install
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>install
+</code></pre></div>
 
 <h2 id="plugin_1">Plugin<a class="headerlink" href="#plugin_1" title="Permanent link">&para;</a></h2>
 <h2 id="install-wallpapers"><code>install-wallpapers</code><a class="headerlink" href="#install-wallpapers" title="Permanent link">&para;</a></h2>
 <p>Installs the default Aureli Wallpapers.</p>
-<pre class="codehilite"><code class="language-bash">au install-wallpapers
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>install-wallpapers
+</code></pre></div>
 
 <h2 id="configuration-commands">Configuration Commands<a class="headerlink" href="#configuration-commands" title="Permanent link">&para;</a></h2>
 <h2 id="set"><code>set</code><a class="headerlink" href="#set" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-bash">au set bar.height 40
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span><span class="nb">set</span><span class="w"> </span>bar.height<span class="w"> </span><span class="m">40</span>
+</code></pre></div>
 
 <p>Supports automatic type casting:</p>
 <div class="table-wrapper"><table>
@@ -1791,28 +1799,28 @@ It acts as a <strong>runtime controller</strong>, <strong>Msg bridge</strong>, a
 </tbody>
 </table></div>
 <p>Nested paths use dot notation:</p>
-<pre class="codehilite"><code class="language-bash">aureli set appearance.accentColor &quot;#ff00ff&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code>aureli<span class="w"> </span><span class="nb">set</span><span class="w"> </span>appearance.accentColor<span class="w"> </span><span class="s2">&quot;#ff00ff&quot;</span>
+</code></pre></div>
 
 <p>Hot-reload occurs via eqSh file watchers.</p>
 <h2 id="get"><code>get</code><a class="headerlink" href="#get" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-bash">au get bar.height
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>get<span class="w"> </span>bar.height
+</code></pre></div>
 
 <p>Special:</p>
-<pre class="codehilite"><code class="language-bash">au get all
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>get<span class="w"> </span>all
+</code></pre></div>
 
 <p>Lists top-level sections.</p>
 <hr />
 <h2 id="reset"><code>reset</code><a class="headerlink" href="#reset" title="Permanent link">&para;</a></h2>
 <p>Delete a config key.</p>
-<pre class="codehilite"><code class="language-bash">au reset bar.height
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>reset<span class="w"> </span>bar.height
+</code></pre></div>
 
 <p>Reset everything:</p>
-<pre class="codehilite"><code class="language-bash">au reset --all
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>reset<span class="w"> </span>--all
+</code></pre></div>
 
 <p>⚠ Requires restart.</p>
 <h1 id="ui-control-commands">UI Control Commands<a class="headerlink" href="#ui-control-commands" title="Permanent link">&para;</a></h1>
@@ -1842,36 +1850,36 @@ It acts as a <strong>runtime controller</strong>, <strong>Msg bridge</strong>, a
 <hr />
 <h2 id="dialogs">Dialogs<a class="headerlink" href="#dialogs" title="Permanent link">&para;</a></h2>
 <p>Create system dialog:</p>
-<pre class="codehilite"><code class="language-bash">au dialog &lt;app&gt; &lt;icon&gt; &lt;title&gt; &lt;desc&gt; &lt;accept&gt; &lt;decline&gt; &lt;cmdA&gt; &lt;cmdD&gt; &lt;style&gt;
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>dialog<span class="w"> </span>&lt;app&gt;<span class="w"> </span>&lt;icon&gt;<span class="w"> </span>&lt;title&gt;<span class="w"> </span>&lt;desc&gt;<span class="w"> </span>&lt;accept&gt;<span class="w"> </span>&lt;decline&gt;<span class="w"> </span>&lt;cmdA&gt;<span class="w"> </span>&lt;cmdD&gt;<span class="w"> </span>&lt;style&gt;
+</code></pre></div>
 
 <p>Bridges to:</p>
-<pre class="codehilite"><code class="language-text">systemDialogs.newDialog
-</code></pre>
+<div class="codehilite"><pre><span></span><code>systemDialogs.newDialog
+</code></pre></div>
 
 <hr />
 <h2 id="notch-apps">Notch Apps<a class="headerlink" href="#notch-apps" title="Permanent link">&para;</a></h2>
 <h3 id="create">Create<a class="headerlink" href="#create" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="language-bash">au new-notch-app MyApp.qml &quot;Music&quot;
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>new-notch-app<span class="w"> </span>MyApp.qml<span class="w"> </span><span class="s2">&quot;Music&quot;</span>
+</code></pre></div>
 
 <h3 id="destroy">Destroy<a class="headerlink" href="#destroy" title="Permanent link">&para;</a></h3>
-<pre class="codehilite"><code class="language-bash">au destroy-notch-app
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>destroy-notch-app
+</code></pre></div>
 
 <hr />
 <h1 id="msg-bridge">Msg Bridge<a class="headerlink" href="#msg-bridge" title="Permanent link">&para;</a></h1>
 <h2 id="generic-msg">Generic Msg<a class="headerlink" href="#generic-msg" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-bash">au msg &lt;command&gt; &lt;method&gt; [args...]
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>msg<span class="w"> </span>&lt;command&gt;<span class="w"> </span>&lt;method&gt;<span class="w"> </span><span class="o">[</span>args...<span class="o">]</span>
+</code></pre></div>
 
 <p>Example:</p>
-<pre class="codehilite"><code class="language-bash">au msg lock lock
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>msg<span class="w"> </span>lock<span class="w"> </span>lock
+</code></pre></div>
 
 <h2 id="show-msg-commands">Show Msg Commands<a class="headerlink" href="#show-msg-commands" title="Permanent link">&para;</a></h2>
-<pre class="codehilite"><code class="language-bash">au msg
-</code></pre>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>msg
+</code></pre></div>
 
 <p>Lists exposed IPC endpoints.</p>
   </div>

@@ -44,11 +44,11 @@
 
 
 
-<meta name="description" content="Frequently asked questions about the eqSh Wiki">
+<meta name="description" content="Frequently asked questions about the Aureli Wiki">
 
 
 
-<meta name="keywords" content="docs, desktop, equora, quickshell, hyprland, faq, eqsh, setup, linux">
+<meta name="keywords" content="docs, desktop, equora, quickshell, hyprland, faq, aureli, setup, linux">
 
 
 
@@ -65,7 +65,7 @@
 
 
 
-<meta property="og:description" content="Frequently asked questions about the eqSh Wiki">
+<meta property="og:description" content="Frequently asked questions about the Aureli Wiki">
 
 
 
@@ -73,7 +73,7 @@
 
 
 
-<meta property="og:image" content="./assets/eqsh.svg">
+<meta property="og:image" content="./assets/aureli.svg">
 
 
 
@@ -84,11 +84,11 @@
 
 
 
-<meta name="twitter:description" content="Frequently asked questions about the eqSh Wiki">
+<meta name="twitter:description" content="Frequently asked questions about the Aureli Wiki">
 
 
 
-<meta name="twitter:image" content="./assets/eqsh.svg">
+<meta name="twitter:image" content="./assets/aureli.svg">
 
 
 <!-- JSON-LD Structured Data -->
@@ -99,7 +99,7 @@
     "@type": "Article",
     "headline": "FAQ",
     "url": "https://eqsh-wiki.github.io/faq/",
-    "description": "Frequently asked questions about the eqSh Wiki",
+    "description": "Frequently asked questions about the Aureli Wiki",
     
     "author": {
       "@type": "Person",
@@ -117,7 +117,7 @@
     
     "image": {
       "@type": "ImageObject",
-      "url": "./assets/eqsh.svg",
+      "url": "./assets/aureli.svg",
       "width": 1200,
       "height": 630
     }
@@ -1603,7 +1603,7 @@
       </div>
       
       <p id="summary" class="text-muted-foreground text-[1.05rem] text-balance sm:text-base">
-        Frequently asked questions about the eqSh Wiki
+        Frequently asked questions about the Aureli Wiki
       </p>
       
     </div>
@@ -1612,11 +1612,306 @@
     <span id="updated_at" class="text-sm opacity-50 hover:opacity-100 transition-opacity duration-200"
         title="last update (local time)"></span>
 </div>
+
+<script>
+    const updatedAt = document.getElementById("updated_at");
+    if (updatedAt) {
+        const date = new Date('2026-04-10T14:06:32+02:00');
+        updatedAt.textContent = date.toLocaleDateString();
+    }
+</script>
  
     </div>
   </div>
   <div class="typography w-full flex-1 *:data-[slot=alert]:first:mt-0">
-    
+    <div class="tabbed-set" data-tabs="1:8"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1"><code>Starting Errors</code></label><div class="tabbed-content">
+<details>
+<summary>I don't know the issue</summary>
+<p>If you can't pinpoint/see the error you can run <code>au run --dev</code> to get the full error message or alternatively run <code>au log</code>, then open a issue on <a href="https://github.com/eq-desktop/eqsh/issues">Github</a> or ask in our <a href="https://discord.gg/wvTS6jPkJc">Discord</a></p>
+</details>
+<details>
+<summary>Missing Quickshell Polkit</summary>
+<p>This issue can be caused by using an outdated version of Quickshell. Please make sure you have the latest version installed, which can be installed with the <code>quickshell-git</code> package.</p>
+</details>
+<details>
+<summary>Aureli won't start at all</summary>
+<p>Make sure Quickshell is installed and accessible in your <code>$PATH</code>. Try running <code>quickshell --version</code> to verify. If it's missing, follow the install guide for your distro.</p>
+</details>
+<details>
+<summary>Black screen after starting</summary>
+<p>This is usually caused by a missing or misconfigured Hyprland setup. Make sure you're running Aureli inside a Hyprland session. Also check that your <code>hyprland.conf</code> does not have conflicting <code>exec-once</code> entries for other bars or shells.</p>
+</details>
+<details>
+<summary>Aureli crashes on startup with a QML error</summary>
+<p>This typically means a component file is corrupted or a submodule wasn't initialized. Run:</p>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
+</code></pre></div>
+
+<p>inside the Aureli directory to fix missing submodules.</p>
+</details>
+<details>
+<summary>"au: command not found" after installation</summary>
+<p>The <code>au</code> binary may not be in your <code>$PATH</code>. Try running:</p>
+<div class="codehilite"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$PATH</span><span class="s2">:/usr/local/bin&quot;</span>
+</code></pre></div>
+
+<p>or add it permanently to your shell config (<code>~/.bashrc</code>, <code>~/.zshrc</code>, etc.).</p>
+</details>
+<details>
+<summary>Aureli starts but nothing appears on screen</summary>
+<p>Make sure your monitors are detected by Hyprland. Check <code>hyprctl monitors</code> to confirm. Another possibility is that your <code>hyprland.conf</code> does not launch Aureli, check if you are missing <code>/usr/local/bin/au run</code> in your <code>exec-once</code> section.</p>
+</details>
+<details>
+<summary>Polkit agent fails to start</summary>
+<p>Install the Quickshell polkit agent and make sure no other polkit agent (like <code>gnome-polkit</code> or <code>lxpolkit</code>) is running at the same time, as they can conflict.</p>
+</details>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2"><code>Installation</code></label><div class="tabbed-content">
+<details>
+<summary>How do I install Aureli?</summary>
+<p>The easiest way is via the install script:</p>
+<div class="codehilite"><pre><span></span><code>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://eqsh-wiki.github.io/get<span class="w"> </span><span class="p">|</span><span class="w"> </span>bash
+au<span class="w"> </span>run
+</code></pre></div>
+
+<p>For a manual install, see the <a href="https://eqsh-wiki.github.io/install">Install Guide</a>.</p>
+</details>
+<details>
+<summary>Which distros are supported?</summary>
+<p>Aureli works on any distro that can run Hyprland and Quickshell. Arch Linux is the most tested and recommended. NixOS, Fedora, and Guix are also supported via their respective Quickshell packages.</p>
+</details>
+<details>
+<summary>Do I need to install anything before Aureli?</summary>
+<p>Yes — you need <a href="https://hypr.land">Hyprland</a> and <a href="https://quickshell.org">Quickshell</a> installed first. Optionally, install the recommended icon and GTK themes for the full look.</p>
+</details>
+<details>
+<summary>How do I install the default wallpapers?</summary>
+<div class="codehilite"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/eq-desktop/wallpapers.git<span class="w"> </span>~/.local/share/equora/wallpapers
+</code></pre></div>
+
+</details>
+<details>
+<summary>How do I update Aureli?</summary>
+<p>Simply run:</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>update<span class="w"> </span>aureli
+</code></pre></div>
+
+<p>Then restart with <code>au restart</code>.</p>
+</details>
+<details>
+<summary>Can I install Aureli without Git?</summary>
+<p>Git is required for the manual install and updates. The curl install script handles everything for you, but Git is still used under the hood.</p>
+</details>
+<details>
+<summary>Where is Aureli installed?</summary>
+<p>By default, Aureli is installed to <code>~/.local/share/equora/eqsh/</code>.</p>
+</details>
+<details>
+<summary>How do I uninstall Aureli?</summary>
+<p>Remove the install directory and the <code>au</code> binary:</p>
+<div class="codehilite"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>~/.local/share/equora/eqsh
+sudo<span class="w"> </span>rm<span class="w"> </span>/usr/local/bin/au
+</code></pre></div>
+
+</details>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3"><code>Settings</code></label><div class="tabbed-content">
+<details>
+<summary>How to change the Wallpaper(s)?</summary>
+<p>You can change your Wallpaper inside the <span class="hover-card-trigger">system settings<span class="hover-card"><code>CTRL+Super+R</code> or run <code>au settings</code></span></span> under the wallpaper section</p>
+</details>
+<details>
+<summary>Can I use my own wallpaper folder?</summary>
+<p>Yes! You can change the wallpaper folder using <code>au set wallpaper.folder /home/yourName/wallpapers</code></p>
+</details>
+<details>
+<summary>How do I set the wallpaper using the terminal?</summary>
+<p>By running <code>au set wallpaper.path /home/yourName/wallpapers</code>
+To get your current one run <code>au get wallpaper.path</code></p>
+</details>
+<details>
+<summary>I installed the default wallpapers, where are they located?</summary>
+<p>The default wallpapers are located at <code>~/.local/share/equora/wallpapers/</code></p>
+</details>
+<details>
+<summary>How do I open the settings app?</summary>
+<p>Press <code>CTRL+Super+R</code> or run <code>au settings</code> from a terminal.</p>
+</details>
+<details>
+<summary>Where is the settings file stored?</summary>
+<p>The user settings file is stored as JSON at <code>~/.config/aureli/config.json</code>. You can edit it manually or use <code>au set</code> and <code>au get</code> from the terminal.</p>
+</details>
+<details>
+<summary>How do I reset settings to default?</summary>
+<p>You can do that by using the cli:</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span>reset<span class="w"> </span><span class="o">[</span>setting<span class="w"> </span>e.g.<span class="w"> </span>wallpaper.folder<span class="o">]</span>
+au<span class="w"> </span>restart<span class="w"> </span><span class="c1"># Very important</span>
+</code></pre></div>
+
+</details>
+<details>
+<summary>How do I change the accent color?</summary>
+<p>Open the Settings app (<code>CTRL+Super+R</code>) and navigate to the Appearance section, where you can pick a custom accent color.</p>
+</details>
+<details>
+<summary>Can I disable the dock?</summary>
+<p>Yes, open Settings &gt; Dock and toggle it off, or run:</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span><span class="nb">set</span><span class="w"> </span>dock.enabled<span class="w"> </span><span class="nb">false</span>
+</code></pre></div>
+
+</details>
+<details>
+<summary>Can I move the panel to the bottom?</summary>
+<p>As of now we don't support that. :(</p>
+</details>
+</div>
+<input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><label for="__tabbed_1_4"><code>Features</code></label><div class="tabbed-content">
+<details>
+<summary>How do I open the App Drawer / Launchpad?</summary>
+<p>You can open the Launchpad from the cli <code>au launchpad</code> or by pressing the configured keybind (default: <code>CTRL+Super+P</code>).</p>
+</details>
+<details>
+<summary>How do I use the Sigrid AI Chatbot?</summary>
+<p>Click the Sigrid icon in the panel to open the AI chatbot panel. Sigrid uses a local or configured AI backend to answer questions directly from your desktop.</p>
+</details>
+<details>
+<summary>How do I take a screenshot?</summary>
+<p>Use the built-in screenshot tool via the keybind <code>Super+Shift+5</code>, or use the cli <code>au msg screenshot open</code>.</p>
+</details>
+<details>
+<summary>How do I use Desktop Widgets?</summary>
+<p>Open the Widget Picker from the desktop and drag widgets onto your desktop. Widgets can be repositioned and resized freely.</p>
+</details>
+<details>
+<summary>How do I manage notifications?</summary>
+<p>Notifications appear as popups and are collected in the notification center. Click the date and time to view the center.</p>
+</details>
+<details>
+<summary>What is the notch?</summary>
+<p>The notch is a macOS-inspired interactive element at the top center of your screen. It houses quick controls, app shortcuts, media info, and more. Click or hover it to expand.</p>
+</details>
+<details>
+<summary>How do I use IPC popups?</summary>
+<p>Aureli exposes an IPC interface for launching popups from scripts or other apps. go to <a href="/development/popup">Development &gt; Popup</a>.</p>
+</details>
+<details>
+<summary>Does Aureli support multiple monitors?</summary>
+<p>Yes. Aureli renders the panel and notch on each connected monitor.</p>
+</details>
+<details>
+<summary>How do I configure the System Tray?</summary>
+<p>The system tray lives in the panel and auto-discovers tray icons from running apps via the StatusNotifierItem protocol. No manual configuration is needed.</p>
+</details>
+</div>
+<input id="__tabbed_1_5" name="__tabbed_1" type="radio" /><label for="__tabbed_1_5"><code>Plugins &amp; Kavo</code></label><div class="tabbed-content">
+<details>
+<summary>What is Kavo?</summary>
+<p>Kavo (<code>.kvo</code>) is the declarative, hierarchical format used for Aureli plugins. It lets you define components, properties, event handlers, and widgets in a human-readable structure.</p>
+</details>
+<details>
+<summary>Where do I put my plugins?</summary>
+<p>Place your <code>.kvo</code> plugin files in <code>~/.config/aureli/plugins/</code>. Aureli will detect and load them on the next restart.</p>
+</details>
+<details>
+<summary>How do I write a basic plugin?</summary>
+<p>A minimal plugin defines a metadata section and at least one widget or event handler in Kavo format. See the <a href="https://eqsh-wiki.github.io/plugins/plugin">Plugin documentation</a> for more.</p>
+</details>
+<details>
+<summary>Can plugins access system information?</summary>
+<p>Yes. Plugins can use built-in Kavo functions and event hooks to read system state such as battery level, network status, and running processes.</p>
+</details>
+<details>
+<summary>How do I reload plugins without restarting?</summary>
+<p>Run <code>au plugin reload</code> to hot-reload plugins without a full restart. Note that some plugin types may still require a full restart.</p>
+</details>
+<details>
+<summary>Can I share plugins with others?</summary>
+<p>Yes — plugins are self-contained <code>.kvo</code> files. You can share them directly or publish them to the community repository.</p>
+</details>
+</div>
+<input id="__tabbed_1_6" name="__tabbed_1" type="radio" /><label for="__tabbed_1_6"><code>Theming</code></label><div class="tabbed-content">
+<details>
+<summary>What icon theme is recommended?</summary>
+<p><a href="https://github.com/vinceliuice/MacTahoe-icon-theme">MacTahoe Icon Theme</a> is the recommended icon theme for the full Apple-inspired look.</p>
+</details>
+<details>
+<summary>What GTK theme is recommended?</summary>
+<p><a href="https://github.com/vinceliuice/MacTahoe-gtk-theme">MacTahoe GTK Theme</a> pairs perfectly with Aureli's visual style.</p>
+</details>
+<details>
+<summary>How do I apply a GTK theme?</summary>
+<p>You can set the GTK theme using <code>gsettings</code>:</p>
+<div class="codehilite"><pre><span></span><code>gsettings<span class="w"> </span><span class="nb">set</span><span class="w"> </span>org.gnome.desktop.interface<span class="w"> </span>gtk-theme<span class="w"> </span><span class="s2">&quot;MacTahoe&quot;</span>
+</code></pre></div>
+
+</details>
+<details>
+<summary>Does Aureli support light mode?</summary>
+<p>Yes. Toggle between light and dark mode in Settings &gt; Appearance, or run:</p>
+<div class="codehilite"><pre><span></span><code>au<span class="w"> </span><span class="nb">set</span><span class="w"> </span>general.darkMode<span class="w"> </span><span class="nb">false</span>
+</code></pre></div>
+
+</details>
+</div>
+<input id="__tabbed_1_7" name="__tabbed_1" type="radio" /><label for="__tabbed_1_7"><code>Keybinds</code></label><div class="tabbed-content">
+<details>
+<summary>What are the default keybinds?</summary>
+<p>Some common defaults:  </p>
+<ul>
+<li><code>CTRL+Super+R</code> — Open Settings  </li>
+<li><code>CTRL+Super+P</code> — Open App Drawer  </li>
+<li><code>CTRL+Super+Q</code> — Lock screen  </li>
+<li><code>Super+Shift+5</code> — Screenshot tool  </li>
+</ul>
+</details>
+<details>
+<summary>How do I change keybinds?</summary>
+<p>Edit the relevant entry in <code>~/.config/hypr/Keys/customkeys.conf</code>.</p>
+</details>
+<details>
+<summary>How do I lock the screen?</summary>
+<p>Press <code>CTRL+Super+Q</code> or run <code>au lock</code> from the terminal.</p>
+</details>
+</div>
+<input id="__tabbed_1_8" name="__tabbed_1" type="radio" /><label for="__tabbed_1_8"><code>General</code></label><div class="tabbed-content">
+<details>
+<summary>What is Aureli?</summary>
+<p>Aureli is a next-generation desktop shell for Hyprland — providing a panel, notch, lockscreen, wallpaper engine, app drawer, notifications, widgets, AI chatbot, and more, all in one polished package.</p>
+</details>
+<details>
+<summary>Is Aureli free and open source?</summary>
+<p>Yes. Aureli is released under the Apache 2.0 License. You are free to use, modify, and distribute it as long as changes remain open source.</p>
+</details>
+<details>
+<summary>What is Quickshell?</summary>
+<p><a href="https://quickshell.org">Quickshell</a> is the QML-based shell toolkit that Aureli is built on top of. It handles rendering and IPC.</p>
+</details>
+<details>
+<summary>Is Aureli affiliated with Apple?</summary>
+<p>No. Aureli is an independent open-source project. The Apple-inspired aesthetic is a design choice only — there is no affiliation with Apple Inc.</p>
+</details>
+<details>
+<summary>Where can I get help?</summary>
+<ul>
+<li>Open an issue on <a href="https://github.com/eq-desktop/eqsh/issues">GitHub</a></li>
+<li>Join the <a href="https://discord.gg/wvTS6jPkJc">Discord</a></li>
+<li>Read the <a href="https://eqsh-wiki.github.io/">Wiki</a></li>
+</ul>
+</details>
+<details>
+<summary>How do I contribute?</summary>
+<p>Fork the repository, make your changes, and open a pull request on <a href="https://github.com/eq-desktop/eqsh">GitHub</a>. Contributions of all kinds — code, docs, themes, plugins — are welcome.</p>
+</details>
+<details>
+<summary>Does Aureli work on Wayland only?</summary>
+<p>Yes. Aureli is built specifically for Hyprland, which is a Wayland compositor. X11 is not supported.</p>
+</details>
+<details>
+<summary>Will Aureli ever support other compositors?</summary>
+<p>Yes. We already support Hyprland and Niri, but some features are not yet supported in Niri.</p>
+</details>
+</div>
+</div>
   </div>
   
   <script>

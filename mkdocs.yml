@@ -32,5 +32,6 @@ markdown_extensions:
   - pymdownx.blocks.details
   - pymdownx.blocks.caption
   - pymdownx.tasklist
+  - shadcn.extensions.hover_card
   - toc:
       permalink: true

@@ -2,19 +2,36 @@
 set -Eeuo pipefail
 
 REPO_URL="https://github.com/eq-desktop/cli.git"
+PIP_ARGS=()
 
 log() { printf "\033[1;32m[+] %s\033[0m\n" "$*"; }
 err() { printf "\033[1;31m[!] %s\033[0m\n" "$*" >&2; }
 die() { err "$*"; exit 1; }
 
 command -v git >/dev/null || die "git is required"
+command -v pip >/dev/null || die "pip is required"
+
+# --- parse arguments ---
+while [[ $# -gt 0 ]]; do
+    case "$1" in
+        --pip-args)
+            shift
+            [[ $# -gt 0 ]] || die "--pip-args requires a value"
+            PIP_ARGS+=($1)
+            ;;
+        *)
+            die "Unknown argument: $1"
+            ;;
+    esac
+    shift
+done
 
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
 
 log "Installing CLI (using pip)"
 
-pip install git+${REPO_URL}
+pip install "${PIP_ARGS[@]}" "git+${REPO_URL}"
 
 aureli install
 

@@ -13,7 +13,6 @@ If you're interested in contributing to the project, check out our [Github](http
 
 ### Roadmap
 - [x] Menu Bar
-- [ ] Global Menu
 - [x] Notch  
 - [x] Notch Applications  
 - [x] Notifications
@@ -28,13 +27,37 @@ If you're interested in contributing to the project, check out our [Github](http
 - [x] Polkit
 - [x] Control Center
 - [x] Dock
-- [ ] Dock with magnification
 - [x] Sigrid AI Chatbot
 - [x] Desktop Widgets
-- [ ] Desktop Files
 - [x] Screenshot tool
 - [x] Full JSON user settings & Settings App
 - [x] Control Center
 - [x] Advanced IPC-powered popup system
 - [x] Spotlight
+- [ ] Global Menu
+- [ ] Dock with magnification
+- [ ] Desktop Files
 - [ ] Spotlight Extensions
+
+### Timeline
+
+::timeline::
+
+- content: First version 0.1.0 of ESH was released.
+  icon: '+lucide:rocket+'
+  sub_title: 'February 2025'
+  title: Launch of Envshell
+- content: Completely new toolkit and branding for eqSh (envshell)
+  icon: '+lucide:cog+'
+  sub_title: August 2025
+  title: Rewrite of Envshell
+- content: Release of Aureli 26.1a with eqSh
+  icon: '+lucide:orbit+'
+  sub_title: January 2026
+  title: Steady Progress
+- content: More to come... (dock effects, desktop files, extensions, etc.)
+  icon: '+lucide:sparkles+'
+  sub_title: Today
+  title: Future
+
+::/timeline::

@@ -4,6 +4,7 @@ repo_url: https://github.com/eq-desktop/eqsh
 site_author: Eq Desktop
 
 extra_css:
+  - css/neoteroi-mkdocs.css
   - css/images.css
 
 theme:
@@ -27,11 +28,13 @@ markdown_extensions:
   - admonition
   - fenced_code
   - codehilite
+  - neoteroi.timeline
   - attr_list
   - pymdownx.blocks.tab
   - pymdownx.blocks.details
   - pymdownx.blocks.caption
   - pymdownx.tasklist
   - shadcn.extensions.hover_card
+  - shadcn.extensions.iconify
   - toc:
       permalink: true

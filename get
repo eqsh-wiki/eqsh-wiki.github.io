@@ -9,7 +9,6 @@ err() { printf "\033[1;31m[!] %s\033[0m\n" "$*" >&2; }
 die() { err "$*"; exit 1; }
 
 command -v git >/dev/null || die "git is required"
-command -v pip >/dev/null || die "pip is required"
 
 # --- parse arguments ---
 while [[ $# -gt 0 ]]; do
@@ -29,9 +28,18 @@ done
 tmp="$(mktemp -d)"
 trap 'rm -rf "$tmp"' EXIT
 
-log "Installing CLI (using pip)"
+if [[ "${AURELI_USE_PIPX:-0}" == "1" ]]; then
+    command -v pipx >/dev/null || die "pipx is required when AURELI_USE_PIPX=1"
 
-pip install "${PIP_ARGS[@]}" "git+${REPO_URL}"
+    log "Installing CLI (using pipx)"
+    pipx install --force "git+${REPO_URL}"
+
+else
+    command -v pip >/dev/null || die "pip is required"
+
+    log "Installing CLI (using pip)"
+    pip install "${PIP_ARGS[@]}" "git+${REPO_URL}"
+fi
 
 aureli install
 
